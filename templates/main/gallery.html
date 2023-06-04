@@ -1,0 +1,303 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+        <!--================Header Area =================-->
+        <header class="main_header_area">
+            <div class="header_top">
+                <div class="container">
+                    <div class="header_top_inner">
+                        <div class="pull-left">
+                            <a href="index.html#"><i class="fa fa-phone"></i>+91 97457 50649</a>
+                            <a href="index.html#"><i class="fa fa-envelope-o"></i>info@mibestie.com</a>
+                        </div>
+                        <div class="pull-right">
+                            <ul class="header_social">
+                                <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="index.html#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="index.html#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="index.html#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_menu">
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html#">
+                                <img src="img/logo1.png" alt="">
+                                <img src="img/logo1.png" alt="">
+                            </a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                {% comment %} <li class="dropdown submenu">
+                                    <a href="{% url 'activity' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                    <!-- <ul class="dropdown-menu">
+                                        <li><a href="index.html">Home Page 1</a></li>
+                                        <li><a href="index-2.html">Home Page 2</a></li>
+                                        <li><a href="index-3.html">Home Page 3</a></li>
+                                        <li><a href="index-4.html">Home Page 4</a></li>
+                                    </ul> -->
+                                </li> {% endcomment %}
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                               <li><a href="{% url 'resorts' %}">Resorts</a></li>
+                                <li><a href="{% url 'activity' %}">Activities</a></li>
+                                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                <li><a href="{% url 'about-us' %}">About Us</a></li>
+                                <li><a href="{% url 'contact-us' %}">Contact Us</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <!-- <li class="search_dropdown">
+                                    <a class="popup-with-zoom-anim" href="index.html#test-search"><i class="icon icon-Search"></i></a>
+                                </li> -->
+                                <li class="book_btn">
+                                    <a class="book_now_btn" href="tel:+919745750649">Book now</a>
+                                </li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </header>
+        <!--================Header Area =================-->
+        
+        <!--================Banner Area =================-->
+        <section class="banner_area">
+            <div class="container">
+                <div class="banner_inner_content">
+                    <h3>Gallery Grid</h3>
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="gallery-two-column.html">gallery grid</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--================End Banner Area =================-->
+        
+        <!--================End Banner Area =================-->
+        <section class="grid_gallery_area">
+            <div class="container">
+                <div class="grid_gallery_inner">
+                    <ul class="gallery_filter">
+                        <li class="active" onclick="filterSelection('c1')" data-filter="*"><a href="">All</a></li>
+                        <li data-filter=".rooms" onclick="filterSelection('c2')"><a href="">Rooms</a></li>
+                        <li data-filter=".activites" onclick="filterSelection('c3')"><a href="">Activites</a></li>
+                        <li data-filter=".event" onclick="filterSelection('c4')"><a href="">Events</a></li>
+                        <li data-filter=".interior" onclick="filterSelection('c5')"><a href="">INterior</a></li>
+                        <li data-filter=".restaurant"onclick="filterSelection('c6')"><a href="">Restaurant</a></li>
+                    </ul>
+                    {% for all_images in all_images %} 
+                    <div class="row grid_gallery_item_inner imageGallery1 c1">   
+                        <div class="col-md-4 col-xs-6 activites restaurant">
+                            <div class="grid_gallery_item">
+                                <img src="{{ all_images.gallery_image.url }}" alt="">
+                                <div class="resort_g_hover">
+                                    <div class="resort_hover_inner">
+                                        <a class="light" href="{{ all_images.gallery_image.url }}"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+                                        <h5>Our Gallery</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <div class="row grid_gallery_item_inner imageGallery1 c2">   
+                        <div class="col-md-4 col-xs-6 activites restaurant">
+                            {% for rooms in rooms %} 
+                            <div class="grid_gallery_item">
+                                <img src="{{ rooms.gallery_image.url }}" alt="">
+                                <div class="resort_g_hover">
+                                    <div class="resort_hover_inner">
+                                        <a class="light" href="{{ rooms.gallery_image.url }}"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+                                        <h5>Our Gallery</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="row grid_gallery_item_inner imageGallery1 c3">   
+                        <div class="col-md-4 col-xs-6 activites restaurant">
+                            {% for activities in activities %} 
+                            <div class="grid_gallery_item">
+                                <img src="{{ activities.gallery_image.url }}" alt="">
+                                <div class="resort_g_hover">
+                                    <div class="resort_hover_inner">
+                                        <a class="light" href="{{ activities.gallery_image.url }}"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+                                        <h5>Our Gallery</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    {% for events in events %} 
+                    <div class="row grid_gallery_item_inner imageGallery1 c4">   
+                        <div class="col-md-4 col-xs-6 activites restaurant">
+                            <div class="grid_gallery_item">
+                                <img src="{{ events.gallery_image.url }}" alt="">
+                                <div class="resort_g_hover">
+                                    <div class="resort_hover_inner">
+                                        <a class="light" href="{{ events.gallery_image.url }}"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+                                        <h5>Our Gallery</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    {% for interior in interior %} 
+                    <div class="row grid_gallery_item_inner imageGallery1 c5">   
+                        <div class="col-md-4 col-xs-6 activites restaurant">
+                            <div class="grid_gallery_item">
+                                <img src="{{ interior.gallery_image.url }}" alt="">
+                                <div class="resort_g_hover">
+                                    <div class="resort_hover_inner">
+                                        <a class="light" href="{{ interior.gallery_image.url }}"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+                                        <h5>Our Gallery</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    {% for restaurant in restaurant %} 
+                    <div class="row grid_gallery_item_inner imageGallery1 c6">   
+                        <div class="col-md-4 col-xs-6 activites restaurant">
+                            <div class="grid_gallery_item">
+                                <img src="{{ restaurant.gallery_image.url }}" alt="">
+                                <div class="resort_g_hover">
+                                    <div class="resort_hover_inner">
+                                        <a class="light" href="{{ restaurant.gallery_image.url }}"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+                                        <h5>Our Gallery</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    
+                </div>
+            </div>
+        </section>
+        <!--================End Banner Area =================-->
+        
+        <!--================Footer Area =================-->
+        <footer class="footer_area">
+            <div class="footer_widget_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-6">
+                            <aside class="f_widget about_widget">
+                                <img src="{% static 'img/logo1.png' %}" alt="" style="width: 170px;">
+                                <div class="ab_wd_list">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Wayanad, Kerala, India, 679327.</h4>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>+91 97457 50649</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book_now_area">
+                                    <a class="book_now_btn" href="tel:+919745750649">Book now</a>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <aside class="f_widget link_widget">
+                                <div class="f_title">
+                                    <h3>Extra Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="index.html#">-  About Us</a></li>
+                                    <li><a href="index.html#">-  Faq’s</a></li>
+                                    <li><a href="index.html#">-  Blog</a></li>
+                                    <li><a href="index.html#">-  Testimonials</a></li>
+                                    <li><a href="index.html#">-  Reservation Now</a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <aside class="f_widget link_widget">
+                                <div class="f_title">
+                                    <h3>our services</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="index.html#">-  Food & Drinks</a></li>
+                                    <li><a href="index.html#">-  Rooms</a></li>
+                                    <li><a href="index.html#">-  Amenities</a></li>
+                                    <li><a href="index.html#">-  Spa & Gym</a></li>
+                                    <li><a href="index.html#">-  Hill Tours</a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <aside class="f_widget instagram_widget">
+                                <div class="f_title">
+                                    <h3>Bestie Tours</h3>
+                                </div>
+                                <ul class="instagram_list" id="instafeed"></ul>
+                                <div style="overflow:hidden;resize:none;max-width:100%;width:300px;height:200px;"><div id="my-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=batheco,+PO,+Kuzhivelippady,+Kochi,+Kerala,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="googlemaps-made" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="grab-maps-authorization">premium bootstrap themes</a><style>#my-map-canvas img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_copyright_area">
+                <div class="container">
+                    <div class="pull-left">
+                        <h4>Copyright © Bestie Tours  <script>document.write(new Date().getFullYear());</script>. All rights reserved. </h4>
+                    </div>
+                    <div class="pull-right">
+                        <h4>Created by: <a href="https://batheco.com" target="_blank">Batheco</a></h4>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--================End Footer Area =================-->
+        
+        <!--================Search Box Area =================-->
+        <div class="search_area zoom-anim-dialog mfp-hide" id="test-search">
+            <div class="search_box_inner">
+                <h3>Search</h3>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="icon icon-Search"></i></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--================End Search Box Area =================-->
+        
+        
+{% endblock content %}
