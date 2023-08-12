@@ -87,11 +87,11 @@ WSGI_APPLICATION = 'mybesties.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# DATABASES = {
-#     'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
-# }
+DATABASES = {
+    'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
-DATABASES = {'default': dj_database_url.config(default='postgres://admin:PL3oqJkbqyQ0cR6jlkzLOPy4zhOLRKYd@dpg-cjbqo0c5kgrc73fbufpg-a.oregon-postgres.render.com/sample_5r2n')}
+# DATABASES = {'default': dj_database_url.config(default='postgres://admin:PL3oqJkbqyQ0cR6jlkzLOPy4zhOLRKYd@dpg-cjbqo0c5kgrc73fbufpg-a.oregon-postgres.render.com/sample_5r2n')}
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Password validation
