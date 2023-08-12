@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8&ar91zxn23m5fn%ho_-g^$lkjg_1syo^x4b7lmu2h)whp72)0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,12 +79,12 @@ WSGI_APPLICATION = 'mybesties.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -135,3 +135,4 @@ STATICFILES_DIRS = os.path.join(BASE_DIR, "static"),
 
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+WSGI_APPLICATION = 'vercel_app.wsgi.app'
