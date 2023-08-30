@@ -10,5 +10,5 @@ urlpatterns = [
     path('resort-detail/<slug:package_slug>/',views.resort_detail,name="resort-detail"),
     path('room-details/<str:room_details>/',views.room_detail,name="room-details"),
     path('events/',views.events,name="events"),
-    path('events-details/',views.events_detail,name="events-details"),
+    path('events-details/<str:details>/',views.events_detail,name="events-details"),
 ]

@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from main.models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort
+from main.models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort,Event
 # Create your views here.
 def home(request):
     testimonials = ClientTestimonials.objects.all()
@@ -75,7 +75,15 @@ def room_detail(request,room_details):
     return render(request,'main/room-detail.html',context)
 
 def events(request):
-    return render(request,'main/events.html')
+    get_events = Event.objects.all()
+    context = {
+        'get_events':get_events
+    }
+    return render(request,'main/events.html',context)
 
-def events_detail(request):
-    return render(request,'main/events-details.html')
+def events_detail(request,details):
+    event_details_page = Event.objects.get(event_name=details)
+    context = {
+        'event_details_page':event_details_page
+    }
+    return render(request,'main/events-details.html',context)

@@ -13,12 +13,12 @@
                                     <img src="img/blog/blog-listing/blog-listing-1.jpg" alt="">
                                 </a>
                                 <div class="blog_text">
-                                    <a href="blog-details.html"><h4>A wedding night in resort</h4></a>
+                                    <a href="blog-details.html"><h4>{{ event_details_page.event_name }}</h4></a>
                                     <ul>
-                                        <li><a href="blog-details.html#">27 Aug 2017</a></li>
-                                        <li><a href="blog-details.html#">1200 / Person</a></li>
+                                        <li><a href="">{{ event_details_page.event_date }}</a></li>
+                                        <li><a href="">1200 / Person</a></li>
                                     </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur velit esse cillum dolore eu ...</p>
+                                    <p>{{ event_details_page.event_description }}</p>
                                 </div>
                             </div>
                             <div class="two_column_sample">
@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                             <div class="s_blog_quote">
-                                <p><i class="fa fa-quote-left" aria-hidden="true"></i> Ut enim ad minima veniam, quis nostrum exercitatio nem ullam corporis suscipit labori osam, nisi ut aliqu id ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+                                <p><i class="fa fa-quote-left" aria-hidden="true"></i> {{ event_details_page.event_quotes }}</p>
                                 
                             </div>
                         </div>
