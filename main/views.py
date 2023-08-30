@@ -73,3 +73,9 @@ def room_detail(request,room_details):
     }
     print(get_details)
     return render(request,'main/room-detail.html',context)
+
+def events(request):
+    return render(request,'main/events.html')
+
+def events_detail(request):
+    return render(request,'main/events-details.html')

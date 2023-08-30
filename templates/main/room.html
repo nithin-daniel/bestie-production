@@ -28,11 +28,11 @@
             {% for get_resort in get_resort %}
             <div class="col-md-4 col-sm-6">
                 <div class="explor_item">
-                    <a href="room-details.html" class="room_image">
+                    <a href="{% url 'room-details' get_resort.resort_name %}" class="room_image">
                         <img src="{{ get_resort.resort_images.url }}"  alt="">
                     </a>
                     <div class="explor_text">
-                        <a href="room-details.html"><h4>{{ get_resort.resort_name }}</h4></a>
+                        <a href="{% url 'room-details' get_resort.resort_name %}"><h4>{{ get_resort.resort_name }}</h4></a>
                         <ul>
                             <li><a href="room.html#">10x15</a></li>
                             <li><a href="room.html#">Mountain view</a></li>
