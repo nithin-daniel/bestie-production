@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'mybesties.wsgi.application'
 # }
 
 
-DATABASES = {'default': dj_database_url.parse(default='postgres://bestie_untb_user:emmeXuZ8KjD9KHDh4K4dTpEFv4Ck1Yee@dpg-cjnpa7q1u98s73fbbv6g-a.oregon-postgres.render.com/bestie_untb')}
+DATABASES = {'default': dj_database_url.config(default='postgres://bestie_untb_user:emmeXuZ8KjD9KHDh4K4dTpEFv4Ck1Yee@dpg-cjnpa7q1u98s73fbbv6g-a.oregon-postgres.render.com/bestie_untb')}
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Password validation
