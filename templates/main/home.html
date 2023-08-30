@@ -97,10 +97,10 @@
                                     </ul>
                                 </li> -->
                                 <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="{% url 'about-us' %}">About Us</a></li>
                                <li><a href="{% url 'resorts' %}">Resorts</a></li>
                                 <li><a href="{% url 'activity' %}">Activities</a></li>
                                 <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                                <li><a href="{% url 'about-us' %}">About Us</a></li>
                                 <li><a href="{% url 'contact-us' %}">Contact Us</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
@@ -363,15 +363,17 @@
                     </div>
                 </div>
                 <div class="row explor_room_item_inner">
+
+                    {% for packages in packages %}
                     <div class="col-md-4 col-sm-6">
                         <div class="explor_item">
                             <a href="room-details.html" class="room_image">
-                                <img src="{% static 'img/room/Couple.jpg' %}" alt="">
+                                <img src="{{ packages.package_image.url }}" alt="">
                             </a>
                             <div class="explor_text">
-                                <a href="room-details.html"><h4>Couple Packages</h4></a>
+                                <a href="{% url 'resort-detail' packages.package_slug %}"><h4>{{ packages.package_name }}</h4></a>
                                 <ul>
-                                    <li><a href="index.html#">Experience a romantic and intimate getaway with our Couple Packages - Blissful Retreat. </a></li>
+                                    <li><a href="">{{ packages.package_description }}</a></li>
                                     <!-- <li><a href="index.html#">Mountain view</a></li>
                                     <li><a href="index.html#">2 Balcony</a></li> -->
                                 </ul>
@@ -380,58 +382,15 @@
                                         <h3>₹1500<span>/ Day</span></h3>
                                     </div>
                                     <div class="pull-right">
-                                        <a class="book_now_btn" href="room.html">View Resorts</a>
+                                        <a class="book_now_btn" href="{% url 'resort-detail' packages.package_slug %}">View Resorts</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="explor_item">
-                            <a href="room-details.html" class="room_image">
-                                <img src="{% static 'img/room/family.jpg' %}" alt="">
-                            </a>
-                            <div class="explor_text">
-                                <a href="room-details.html"><h4>Family Packages</h4></a>
-                                <ul>
-                                    <li><a href="index.html#">Create lasting memories with your family with our Family Packages - Fun-Filled Getaway.</a></li>
-                                    <!-- <li><a href="index.html#">Mountain view</a></li>
-                                    <li><a href="index.html#">2 Balcony</a></li> -->
-                                </ul>
-                                <div class="explor_footer">
-                                    <div class="pull-left">
-                                        <h3>₹1500<span>/ Day</span></h3>
-                                    </div>
-                                    <div class="pull-right">
-                                        <a class="book_now_btn" href="room.html">View Resorts</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="explor_item">
-                            <a href="room-details.html" class="room_image">
-                                <img src="{% static 'img/room/friends.jpg' %}" alt="">
-                            </a>
-                            <div class="explor_text">
-                                <a href="room-details.html"><h4>Friends Package </h4></a>
-                                <ul>
-                                    <li><a href="index.html#">Reconnect with your friends and forge unforgettable bonds with our Friends Package - Unforgettable Bonding.</a></li>
-                                    <!-- <li><a href="index.html#">Mountain view</a></li>
-                                    <li><a href="index.html#">2 Balcony</a></li> -->
-                                </ul>
-                                <div class="explor_footer">
-                                    <div class="pull-left">
-                                        <h3>₹1500<span>/ Day</span></h3>
-                                    </div>
-                                    <div class="pull-right">
-                                        <a class="book_now_btn" href="room.html">View Resorts</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+                   
+                    
                 </div>
             </div>
         </section>

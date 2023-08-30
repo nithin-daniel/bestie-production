@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-    'dashboard',
 ]
 
 MIDDLEWARE = [
@@ -82,17 +81,17 @@ WSGI_APPLICATION = 'mybesties.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 # DATABASES = {
 #     'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
 # }
 
-DATABASES = {'default': dj_database_url.config(default='postgres://admin:PL3oqJkbqyQ0cR6jlkzLOPy4zhOLRKYd@dpg-cjbqo0c5kgrc73fbufpg-a.oregon-postgres.render.com/sample_5r2n')}
+# DATABASES = {'default': dj_database_url.config(default='postgres://admin:PL3oqJkbqyQ0cR6jlkzLOPy4zhOLRKYd@dpg-cjbqo0c5kgrc73fbufpg-a.oregon-postgres.render.com/sample_5r2n')}
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Password validation
@@ -143,7 +142,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # STATIC_FILE_ROOT = os.path.join(BASE_DIR, "static")
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"static"),
-    os.path.join(BASE_DIR, "dashboard/static"),
 ]
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

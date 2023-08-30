@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <!--================Banner Area =================-->
+ <section class="banner_area">
+    <div class="container">
+        <div class="banner_inner_content">
+            <h3>Couple Friendly Resorts</h3>
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="room.html">Resorts</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--================End Banner Area =================-->
+
+<!--================Explor Room Area =================-->
+<section class="explor_room_area explore_room_list">
+    <div class="container">
+        <div class="explor_title row m0">
+            <div class="left_ex_title">
+                <h2>Explor Our <span>Resorts</span></h2>
+                <p>choose a resort according to Your budget</p>
+            </div>
+        </div>
+        <div class="row explor_room_item_inner">
+            {% for get_resort in get_resort %}
+            <div class="col-md-4 col-sm-6">
+                <div class="explor_item">
+                    <a href="room-details.html" class="room_image">
+                        <img src="{{ get_resort.resort_images.url }}"  alt="">
+                    </a>
+                    <div class="explor_text">
+                        <a href="room-details.html"><h4>{{ get_resort.resort_name }}</h4></a>
+                        <ul>
+                            <li><a href="room.html#">10x15</a></li>
+                            <li><a href="room.html#">Mountain view</a></li>
+                            <li><a href="room.html#">2 Balcony</a></li>
+                        </ul>
+                        <div class="explor_footer">
+                            <div class="pull-left">
+                                <h3>₹1700 <span>/ Night</span></h3>
+                            </div>pass
+                            <div class="pull-right">
+                                <a class="book_now_btn" href="{% url 'room-details' get_resort.resort_name %}">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- <nav aria-label="Page navigation" class="room_pagination">
+            <ul class="pagination">
+                <li>
+                    <a href="room.html#" aria-label="Previous">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li><a href="room.html#">1</a></li>
+                <li><a href="room.html#">2</a></li>
+                <li><a href="room.html#">3</a></li>
+                <li>
+                    <a href="room.html#" aria-label="Next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav> -->
+    </div>
+</section>
+<!--================End Explor Room Area =================-->
+{% endblock content %}
+

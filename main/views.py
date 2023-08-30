@@ -1,10 +1,12 @@
 from django.shortcuts import render,redirect
-from main.models import Activity,ClientTestimonials,GalleryPhotos,GalleryCategory
+from main.models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort
 # Create your views here.
 def home(request):
     testimonials = ClientTestimonials.objects.all()
+    packages = Packages.objects.all()
     context = {
-        'testimonials':testimonials
+        'testimonials':testimonials,
+        'packages':packages
     }
     return render(request,'main/home.html',context)
 
@@ -54,3 +56,20 @@ def contactus(request):
 
 def success_page(request):
     return render(request,'main/success-page-popup.html')
+
+def resort_detail(request,package_slug):
+    package_instance = Packages.objects.get(package_slug=package_slug)
+    get_resort = Resort.objects.filter(resort_package=package_instance)
+    context = {
+        'get_resort':get_resort,
+    }
+    return render(request,'main/room.html',context)
+
+def room_detail(request,room_details):
+    get_details = Resort.objects.get(resort_name=room_details)
+    print(get_details.resort_images)
+    context = {
+        'get_details':get_details
+    }
+    print(get_details)
+    return render(request,'main/room-detail.html',context)
