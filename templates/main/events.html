@@ -96,7 +96,7 @@
                             <li><a href="">1200 / Person</a></li>
                         </ul>
                         <p>{{ get_events.event_description }}</p>
-                        <a class="book_now_btn" href="{% url 'events-details' get_events.event_name%}">Read more</a>
+                        <a class="book_now_btn" href="{% url 'events-details' details=get_events.event_name %}">Read more</a>
                     </div>
                 </div>
             </div>

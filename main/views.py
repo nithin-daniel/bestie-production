@@ -49,7 +49,8 @@ def resorts(request):
     context = {
         'get_resorts':get_resorts,
     }
-    return render(request,'main/resorts.html')
+    return render(request,'main/resorts.html',context)
+
 def contactus(request):
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -77,7 +78,6 @@ def room_detail(request,room_details):
     context = {
         'get_details':get_details
     }
-    print(get_details)
     return render(request,'main/room-detail.html',context)
 
 def events(request):
