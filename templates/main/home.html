@@ -515,32 +515,21 @@
                             <div class="left_ex_title">
                                 <h2>Latest <span>News</span></h2>
                             </div>
+                            {% for latest_news in latest_news %}
                             <div class="col-sm-6">
                                 <div class="l_news_item">
                                     <a href="blog-details.html" class="news_img">
                                         <img src="{% static 'img/blog/latest-news/l-news-1.jpg' %}" alt="">
                                     </a>
                                     <div class="news_text">
-                                        <a class="l_date" href="index.html#">26 Aug 2022</a>
-                                        <a href="index.html#"><h4>A Night in Resort with Family</h4></a>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa nt ium dolor emque ...</p>
+                                        <a class="l_date" href="index.html#">{{ latest_news.news_date }}</a>
+                                        <a href="index.html#"><h4>{{ latest_news.news_title }}</h4></a>
+                                        <p>{{ latest_news.news_description }}</p>
                                         <a class="news_more" href="blog-details.html">Read more</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="l_news_item">
-                                    <a href="blog-details.html" class="news_img">
-                                        <img src="{% static 'img/blog/latest-news/l-news-2.jpg' %}" alt="">
-                                    </a>
-                                    <div class="news_text">
-                                        <a class="l_date" href="index.html#">26 Aug 2022</a>
-                                        <a href="index.html#"><h4>A Night in Resort with Family</h4></a>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa nt ium dolor emque ...</p>
-                                        <a class="news_more" href="blog-details.html">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="col-md-4">

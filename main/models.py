@@ -114,5 +114,19 @@ class Event(models.Model):
 
     def __str__(self):
         return self.event_name
+
+
+class LatestNews(models.Model):
+    news_title = models.CharField(max_length=100)
+    news_date = models.DateField()
+    news_description = models.TextField()
+    new_image = models.ImageField(upload_to='New Imges/')
+
+    class Meta:
+        verbose_name_plural = 'Latest News'
+
+    def __str__(self):
+        return self.news_title
+    
     
 
