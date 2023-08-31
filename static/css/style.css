@@ -39,6 +39,9 @@ Table of Content:
 /*----------------------------------------------------*/
 /*font Variables*/
 /*Color Variables*/
+.button{
+  border-radius: 10px;
+}
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900|Montserrat:200,300,400,400i,500,500i,600,700,800,900|Open+Sans:300,400,400i,600,600i,700,800|PT+Sans:400,400i,700,700i|Poppins:300,400,500,600,700");
 .col-md-offset-right-1, .col-lg-offset-right-1 {
   margin-right: 8.33333333%;

@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from main.models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort,Event,LatestNews
+from main.models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort,Event,LatestNews,ContactUs
 # Create your views here.
 def home(request):
     testimonials = ClientTestimonials.objects.all()
@@ -22,23 +22,23 @@ def activity(request):
     return render(request,'main/activity.html',context)
 
 def gallery(request):
-    global all_images,rooms,activities,events,interior,restaurant
-    all_images = GalleryPhotos.objects.all()
-    rooms = GalleryPhotos.objects.filter(image_category__category_name="Rooms")
-    activities = GalleryPhotos.objects.filter(image_category__category_name="Activities")
-    events = GalleryPhotos.objects.filter(image_category__category_name="Events")
-    interior = GalleryPhotos.objects.filter(image_category__category_name="Interior")
-    restaurant = GalleryPhotos.objects.filter(image_category__category_name="Restaurant")
-    context = {
-        "all_images":all_images,
-        "rooms":rooms,
-        "activities":activities,
-        'events':events,
-        'interior':interior,
-        'restaurant':restaurant
-    }
+    # global all_images,rooms,activities,events,interior,restaurant
+    # all_images = GalleryPhotos.objects.all()
+    # rooms = GalleryPhotos.objects.filter(image_category__category_name="Rooms")
+    # activities = GalleryPhotos.objects.filter(image_category__category_name="Activities")
+    # events = GalleryPhotos.objects.filter(image_category__category_name="Events")
+    # interior = GalleryPhotos.objects.filter(image_category__category_name="Interior")
+    # restaurant = GalleryPhotos.objects.filter(image_category__category_name="Restaurant")
+    # context = {
+    #     "all_images":all_images,
+    #     "rooms":rooms,
+    #     "activities":activities,
+    #     'events':events,
+    #     'interior':interior,
+    #     'restaurant':restaurant
+    # }
 
-    return render(request,'main/gallery.html',context)
+    return render(request,'main/gallery.html')
 
 def aboutus(request):
     testimonials = ClientTestimonials.objects.all()
@@ -59,7 +59,10 @@ def contactus(request):
         email = request.POST.get('email')
         number = request.POST.get('number')
         message = request.POST.get('message')
-        return redirect("home")
+        # contact_us = ContactUs()
+        ContactUs.objects.create(name=name,email=email,phone_number=number,message=message)
+        # contact_us.save()
+        return redirect("contact-us")
     else:
         return render(request,'main/contact-us.html')    
 

@@ -129,4 +129,4 @@ class LatestNews(models.Model):
         return self.news_title
     
     
-
+    
