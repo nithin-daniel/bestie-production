@@ -45,6 +45,10 @@ def aboutus(request):
     }
     return render(request,'main/about-us.html',context)
 def resorts(request):
+    get_resorts = Resort.objects.all()
+    context = {
+        'get_resorts':get_resorts,
+    }
     return render(request,'main/resorts.html')
 def contactus(request):
     if request.method == 'POST':
