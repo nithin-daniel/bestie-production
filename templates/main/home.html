@@ -549,23 +549,17 @@
                                 <h2>Upcoming <span>Events</span></h2>
                             </div>
                             <div class="right_event_area">
+                                {% for events in events %}
                                 <div class="media">
                                     <div class="media-left">
-                                        <h3>17<span>JUN</span></h3>
+                                        <h3>{{ events.event_date.day }}<span>{{ events.event_date.month }}</span></h3>
                                     </div>
                                     <div class="media-body">
-                                        <h4>Anneversay of our resort</h4>
+                                        <h4>{{ events.event_name }}</h4>
                                     </div>
                                 </div>
-                                <div class="media">
-                                    <div class="media-left">
-                                        <h3>25<span>Jun</span></h3>
-                                    </div>
-                                    <div class="media-body">
-                                        <h4>Anneversay of our resort</h4>
-                                    </div>
-                                </div>
-                                <a class="all_s_btn" href="index.html#">view all events</a>
+                                {% endfor %}
+                                <a class="all_s_btn" href="{% url 'events' %}">view all events</a>
                             </div>
                         </div>
                     </div>

@@ -4,9 +4,11 @@ from main.models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resor
 def home(request):
     testimonials = ClientTestimonials.objects.all()
     packages = Packages.objects.all()
+    events = Event.objects.all()[:2]
     context = {
         'testimonials':testimonials,
-        'packages':packages
+        'packages':packages,
+        'events':events,
     }
     return render(request,'main/home.html',context)
 
