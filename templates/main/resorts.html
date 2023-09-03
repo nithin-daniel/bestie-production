@@ -32,7 +32,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="">
+                            <a class="navbar-brand" href="{% url 'home' %}">
                                 <img src="{% static 'img/logo1.png' %}" alt="">
                                 <img src="{% static 'img/logo1.png' %}" alt="">
                             </a>
@@ -144,7 +144,7 @@
                     {% for get_resorts in get_resorts %}
                     <div class="col-md-4 col-sm-6">
                         <div class="explor_item">
-                            <a href="room-details.html" class="room_image">
+                            <a href="{% url 'resort-detail' get_resorts.resort_slug %}" class="room_image">
                                 <img src="{{ get_resorts.resort_images.url }}" alt="">
                             </a>
                             <div class="explor_text">
@@ -195,7 +195,7 @@
                     <div class="row">
                         <div class="col-md-3 col-xs-6">
                             <aside class="f_widget about_widget">
-                                <img src="{% static 'img/logo1.png' %}" alt="" style="width: 170px;">
+                                <a href="{% url 'home' %}"><img src="{% static 'img/logo1.png' %}" alt="" style="width: 170px;"></a>
                                 <div class="ab_wd_list">
                                     <div class="media">
                                         <div class="media-left">

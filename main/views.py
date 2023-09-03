@@ -70,12 +70,11 @@ def success_page(request):
     return render(request,'main/success-page-popup.html')
 
 def resort_detail(request,package_slug):
-    package_instance = Packages.objects.get(package_slug=package_slug)
-    get_resort = Resort.objects.filter(resort_package=package_instance)
+    get_resort = Resort.objects.filter(resort_slug=package_slug)
     context = {
         'get_resort':get_resort,
     }
-    return render(request,'main/room.html',context)
+    return render(request,'main/resort-details.html',context)
 
 def room_detail(request,room_details):
     get_details = Resort.objects.get(resort_name=room_details)

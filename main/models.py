@@ -91,12 +91,26 @@ class Packages(models.Model):
 class Resort(models.Model):
     resort_name = models.CharField(max_length=100)
     resort_description = models.TextField()
-    resort_service = models.CharField(max_length=100)
-    resort_aminities = models.CharField(max_length=100)
+    resort_service_1 = models.CharField(max_length=100)
+    resort_service_2 = models.CharField(max_length=100)
+    resort_service_3 = models.CharField(max_length=100)
+    resort_service_4 = models.CharField(max_length=100)
+    resort_service_5 = models.CharField(max_length=100)
+    resort_service_6 = models.CharField(max_length=100)
+    resort_service_7 = models.CharField(max_length=100)
+    resort_service_8 = models.CharField(max_length=100)
+    resort_aminities_1 = models.CharField(max_length=100)
+    resort_aminities_2 = models.CharField(max_length=100)
+    resort_aminities_3 = models.CharField(max_length=100)
+    resort_aminities_4 = models.CharField(max_length=100)
+    resort_aminities_5 = models.CharField(max_length=100)
+    resort_aminities_6 = models.CharField(max_length=100)
+    resort_aminities_7 = models.CharField(max_length=100)
+    resort_aminities_8 = models.CharField(max_length=100)
     resort_amount  = models.CharField(max_length=100)
     resort_images = models.ImageField(upload_to='Resort_Image') 
     resort_package = models.ForeignKey(Packages,on_delete=models.CASCADE)
-
+    resort_slug = models.SlugField()
     class Meta:
         verbose_name_plural = 'Resort'
     
