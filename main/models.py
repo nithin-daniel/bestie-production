@@ -125,6 +125,9 @@ class Event(models.Model):
     event_specialities = models.CharField(max_length=100)
     event_benefits = models.CharField(max_length=100)
     event_quotes = models.CharField(max_length=100)
+    event_photo = models.ImageField(upload_to='Event_Images')
+    event_about_section = models.TextField()
+    event_no_of_participations = models.PositiveBigIntegerField()
 
     def __str__(self):
         return self.event_name

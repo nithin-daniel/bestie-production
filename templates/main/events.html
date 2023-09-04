@@ -85,11 +85,11 @@
             {% for get_events in get_events %}
             <div class="col-sm-6">
                 <div class="blog_item">
-                    <a href="blog-details.html" class="blog_img">
-                        <img src="{% static 'img/blog/main-blog/blog-1.jpg' %}" alt="">
+                    <a href="{% url 'events-details' get_events.event_name %}" class="blog_img">
+                        <img src="{{ get_events.event_photo.url }}" alt="">
                     </a>
                     <div class="blog_text">
-                        <a href="{% url 'events-details' get_events.event_name%}"><h4>{{ get_events.event_name }}</h4></a>
+                        <a href="{% url 'events-details' get_events.event_name %}"><h4>{{ get_events.event_name }}</h4></a>
                         <ul>
                             <li><a href="">{{ get_events.event_date }}</a></li>
                             <li><a href="">1200 / Person</a></li>

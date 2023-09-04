@@ -92,8 +92,10 @@ def events(request):
     return render(request,'main/events.html',context)
 
 def events_detail(request,details):
-    event_details_page = Event.objects.get(event_name=details)
+    event_details_page = Event.objects.filter(event_name=details).first()
+    upcomming_event = Event.objects.all()[:5]
     context = {
-        'event_details_page':event_details_page
+        'event_details_page':event_details_page,
+        'upcomming_event':upcomming_event
     }
     return render(request,'main/events-details.html',context)

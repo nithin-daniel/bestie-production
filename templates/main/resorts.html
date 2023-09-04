@@ -148,7 +148,7 @@
                                 <img src="{{ get_resorts.resort_images.url }}" alt="">
                             </a>
                             <div class="explor_text">
-                                <a href=""><h4>{{ get_resorts.resort_name }}</h4></a>
+                                <a href="{% url 'resort-detail' get_resorts.resort_slug %}"><h4>{{ get_resorts.resort_name }}</h4></a>
                                 <ul>
                                     <li><a href="room.html#">10x15</a></li>
                                     <li><a href="room.html#">Mountain view</a></li>
@@ -156,10 +156,10 @@
                                 </ul>
                                 <div class="explor_footer">
                                     <div class="pull-left">
-                                        <h3>₹1700 <span>/ Night</span></h3>
+                                        <h3>₹{{ get_resorts.resort_amount }}<span>/ Night</span></h3>
                                     </div>
                                     <div class="pull-right">
-                                        <a class="book_now_btn" href="room-details.html">View details</a>
+                                        <a class="book_now_btn" href="{% url 'resort-detail' get_resorts.resort_slug %}">View details</a>
                                     </div>
                                 </div>
                             </div>

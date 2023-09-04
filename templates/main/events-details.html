@@ -86,13 +86,13 @@
                         <div class="blog_details_inner">
                             <div class="blog_item">
                                 <a href="blog-details.html" class="blog_img">
-                                    <img src="img/blog/blog-listing/blog-listing-1.jpg" alt="">
+                                    <img src="{{ event_details_page.event_photo.url }}" alt="">
                                 </a>
                                 <div class="blog_text">
                                     <a href="blog-details.html"><h4>{{ event_details_page.event_name }}</h4></a>
                                     <ul>
                                         <li><a href="">{{ event_details_page.event_date }}</a></li>
-                                        <li><a href="">1200 / Person</a></li>
+                                        <li><a href="">{{ event_details_page.event_no_of_participations }} / Person</a></li>
                                     </ul>
                                     <p>{{ event_details_page.event_description }}</p>
                                 </div>
@@ -100,10 +100,7 @@
                             <div class="two_column_sample">
                                 <h3>About The Event</h3>
                                 <div class="two_column_item">
-                                    <p>Ut enim ad minima veniam, quis nostrum exerci-tatio nem ullam corporis suscipit laboriosam, nisi ut aliqu id ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui.</p>
-                                </div>
-                                <div class="two_column_item">
-                                    <p>Ut enim ad minima veniam, quis nostrum exerci-tatio nem ullam corporis suscipit laboriosam, nisi ut aliqu id ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui.</p>
+                                    <p>{{ event_details_page.event_about_section }}</p>
                                 </div>
                             </div>
                             <div class="s_blog_quote">
@@ -140,22 +137,12 @@
                                     <h3>Upcoming Events</h3>
                                 </div>
                                 <div class="recent_inner">
+                                    {% for upcomming_event in upcomming_event %}
                                     <div class="recent_item">
-                                        <a href="blog-details.html#"><h4>5 tips for book a resort for your family holiday.</h4></a>
-                                        <h5>08 March 2017</h5>
+                                        <a href="{% url 'events-details' upcomming_event.event_name %}"><h4>{{ upcomming_event.event_name }}</h4></a>
+                                        <h5>{{ upcomming_event.event_date }}</h5>
                                     </div>
-                                    <div class="recent_item">
-                                        <a href="blog-details.html#"><h4>5 tips for book a resort for your family holiday.</h4></a>
-                                        <h5>08 March 2017</h5>
-                                    </div>
-                                    <div class="recent_item">
-                                        <a href="blog-details.html#"><h4>5 tips for book a resort for your family holiday.</h4></a>
-                                        <h5>08 March 2017</h5>
-                                    </div>
-                                    <div class="recent_item">
-                                        <a href="blog-details.html#"><h4>5 tips for book a resort for your family holiday.</h4></a>
-                                        <h5>08 March 2017</h5>
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </aside> 
                         </div>
