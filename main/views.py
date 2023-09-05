@@ -22,6 +22,7 @@ def activity(request):
     return render(request,'main/activity.html',context)
 
 def gallery(request):
+    # global all_images,rooms,activities,events,interior,restaurant
     images = GalleryPhotos.objects.all()
     context = {
         "images":images,
