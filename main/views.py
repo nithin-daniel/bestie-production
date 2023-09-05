@@ -22,24 +22,25 @@ def activity(request):
     return render(request,'main/activity.html',context)
 
 def gallery(request):
-    # global all_images,rooms,activities,events,interior,restaurant
-    # all_images = GalleryPhotos.objects.all()
-    # rooms = GalleryPhotos.objects.filter(image_category__category_name="Rooms")
-    # activities = GalleryPhotos.objects.filter(image_category__category_name="Activities")
-    # events = GalleryPhotos.objects.filter(image_category__category_name="Events")
-    # interior = GalleryPhotos.objects.filter(image_category__category_name="Interior")
-    # restaurant = GalleryPhotos.objects.filter(image_category__category_name="Restaurant")
-    # context = {
-    #     "all_images":all_images,
-    #     "rooms":rooms,
-    #     "activities":activities,
-    #     'events':events,
-    #     'interior':interior,
-    #     'restaurant':restaurant
-    # }
+    images = GalleryPhotos.objects.all()
+    context = {
+        "images":images,
+    }
 
-    return render(request,'main/gallery.html')
+    return render(request,'main/gallery.html',context)
 
+def gallery_filter(request,filter_object):
+    print(filter_object)
+    # images = GalleryPhotos.objects.filter(image_category=filter_object)
+    # print(images)
+    if request.is_ajax(request):
+        images = GalleryPhotos.objects.filter(image_category__gallery_category_name=filter_object)
+        context = {
+            'images':images
+        }
+        return render(request,'main/category.html',context)
+    # return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
+    pass
 def aboutus(request):
     testimonials = ClientTestimonials.objects.all()
     context = {

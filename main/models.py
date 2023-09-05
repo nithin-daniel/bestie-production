@@ -35,10 +35,7 @@ class ClientTestimonials(models.Model):
     
     
 class GalleryPhotos(models.Model):
-    image_category = models.CharField(max_length=100)
     gallery_image = models.ImageField(upload_to='gallery_photos')
-
-
     class Meta:
         verbose_name_plural = 'Gallery Photos'
 
