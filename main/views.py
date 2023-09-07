@@ -22,7 +22,6 @@ def activity(request):
     return render(request,'main/activity.html',context)
 
 def gallery(request):
-    # global all_images,rooms,activities,events,interior,restaurant
     images = GalleryPhotos.objects.all()
     context = {
         "images":images,
@@ -30,18 +29,6 @@ def gallery(request):
 
     return render(request,'main/gallery.html',context)
 
-def gallery_filter(request,filter_object):
-    print(filter_object)
-    # images = GalleryPhotos.objects.filter(image_category=filter_object)
-    # print(images)
-    if request.is_ajax(request):
-        images = GalleryPhotos.objects.filter(image_category__gallery_category_name=filter_object)
-        context = {
-            'images':images
-        }
-        return render(request,'main/category.html',context)
-    # return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
-    pass
 def aboutus(request):
     testimonials = ClientTestimonials.objects.all()
     context = {

@@ -5,7 +5,6 @@ urlpatterns = [
     path('activity/',views.activity,name="activity"),
     path('resorts/',views.resorts,name="resorts"),
     path('gallery/',views.gallery,name="gallery"),
-    path('gallery-filter/<str:filter_object>/',views.gallery_filter,name="gallery-filter"),
     path('about-us/',views.aboutus,name="about-us"),
     path('contact-us/',views.contactus,name="contact-us"),
     path('resort-detail/<slug:package_slug>/',views.resort_detail,name="resort-detail"),

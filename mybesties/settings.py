@@ -86,12 +86,17 @@ WSGI_APPLICATION = 'mybesties.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
 DATABASES = {
-    'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mibestie',
+        'USER': 'root',
+        'PASSWORD': 'mibestieadmin',
+        'HOST':'localhost',
+        'PORT':'3306',
+    }
 }
-
-
-# DATABASES = {'default': dj_database_url.config(default='postgres://sudo_delete_database_bestie_user:dWqRwDt5FZ5gWHiifOedcAfRGNPuBXyy@dpg-cjrmn65he99c73cs37c0-a.oregon-postgres.render.com/sudo_delete_database_bestie')}
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Password validation
