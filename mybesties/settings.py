@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-8&ar91zxn23m5fn%ho_-g^$lkjg_1syo^x4b7lmu2h)whp72)0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','bestie-mx2m.onrender.com','www.mibestie.com']
+ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-    'useradmin',
+    'useradmin'
 ]
 
 MIDDLEWARE = [
@@ -87,16 +87,9 @@ WSGI_APPLICATION = 'mybesties.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mibestie',
-        'USER': 'root',
-        'PASSWORD': 'mibestieadmin',
-        'HOST':'localhost',
-        'PORT':'3306',
-    }
-}
+
+
+# DATABASES = {'default': dj_database_url.config(default='postgres://bestie_untb_user:emmeXuZ8KjD9KHDh4K4dTpEFv4Ck1Yee@dpg-cjnpa7q1u98s73fbbv6g-a.oregon-postgres.render.com/bestie_untb')}
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Password validation
