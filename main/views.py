@@ -6,11 +6,14 @@ def home(request):
     packages = Packages.objects.all()
     events = Event.objects.all()[:2]
     latest_news = LatestNews.objects.all()[:2]
+    images = GalleryPhotos.objects.all()
+
     context = {
         'testimonials':testimonials,
         'packages':packages,
         'events':events,
-        'latest_news':latest_news
+        'latest_news':latest_news,
+        "images":images,
     }
     return render(request,'main/home.html',context)
 

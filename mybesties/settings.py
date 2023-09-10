@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8&ar91zxn23m5fn%ho_-g^$lkjg_1syo^x4b7lmu2h)whp72)0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','www.mibestie.com','mibesties.onrender.com','mibestie.com']
 # Application definition
@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'mybesties.wsgi.application'
 
 # DATABASES = {
 #    'default': {
- #       'ENGINE': 'django.db.backends.sqlite3',
-  #      'NAME': BASE_DIR / 'db.sqlite3',
-  #  }
-#}
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+# }
 DATABASES = {
     'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
