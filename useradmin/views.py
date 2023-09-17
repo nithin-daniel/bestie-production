@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login as login_process
+from django.contrib.auth import authenticate,login as login_process ,logout
 from .models import SubUser,BestieAdmin
 from main.models import Resort
 from django.contrib import messages
@@ -16,13 +16,12 @@ def verify(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
-        username_check = SubUser.objects.filter(username=username,is_subuser=True).first()
-        password_check = SubUser.objects.filter(password=password).first()
-        # if  username_check and password_check:
-        # else:
-        #     messages.error(request,'User Not Found')
         user = authenticate(username=username,password=password)
         if user is not None:
+            subuser = SubUser.objects.filter(username=username,is_subuser=True)
+            if not subuser:
+                messages.error(request,'You have no permission')
+                return redirect('useradmin:login')
             login_process(request,user)
             # return render(request,'useradmin/dashboard.html')
             return redirect('useradmin:dashboard')
@@ -31,7 +30,12 @@ def verify(request):
 
 @login_required()
 def dashboard(request):
-    return render(request,'useradmin/dashboard.html')
+    user = request.user
+    resort = Resort.objects.filter(user=user)
+    context = {
+        'resort':resort
+    }
+    return render(request,'useradmin/dashboard.html',context)
 
 @login_required()
 def add_resort(request):
@@ -72,3 +76,9 @@ def add_resort(request):
         'package':packages
     }
     return render(request, 'useradmin/add_resort.html', context) 
+def resort_delete(request,id):
+    Resort.objects.filter(id=id).delete()
+    return redirect('useradmin:dashboard')
+def logout_view(request):
+    logout(request)
+    return redirect('useradmin:login')
