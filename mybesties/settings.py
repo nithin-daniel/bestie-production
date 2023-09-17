@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'mybesties.wsgi.application'
 #    }
 # }
 DATABASES = {
-    'default':dj_database_url.parse('postgres://mibestie_jebf_user:VSujwiPze38eWHHUICv37CcPwaeMVMwt@dpg-ck3l7l36fquc73ddsmq0-a.oregon-postgres.render.com/mibestie_jebf')
+    'default':dj_database_url.parse('os.environ.get("DATABASE_URL"')
 }
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
