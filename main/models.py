@@ -1,5 +1,6 @@
 from django.db import models
 from PIL import Image
+from django.utils.text import slugify
 # Create your models here.
 class Activity(models.Model):
     title = models.CharField(max_length=100)
@@ -90,24 +91,30 @@ class Resort(models.Model):
     resort_description = models.TextField()
     resort_service_1 = models.CharField(max_length=100)
     resort_service_2 = models.CharField(max_length=100)
-    resort_service_3 = models.CharField(max_length=100)
-    resort_service_4 = models.CharField(max_length=100)
-    resort_service_5 = models.CharField(max_length=100)
-    resort_service_6 = models.CharField(max_length=100)
-    resort_service_7 = models.CharField(max_length=100)
-    resort_service_8 = models.CharField(max_length=100)
+    resort_service_3 = models.CharField(max_length=100,null=True,blank=True)
+    resort_service_4 = models.CharField(max_length=100,null=True,blank=True)
+    resort_service_5 = models.CharField(max_length=100,null=True,blank=True)
+    resort_service_6 = models.CharField(max_length=100,null=True,blank=True)
+    resort_service_7 = models.CharField(max_length=100,null=True,blank=True)
+    resort_service_8 = models.CharField(max_length=100,null=True,blank=True)
     resort_aminities_1 = models.CharField(max_length=100)
     resort_aminities_2 = models.CharField(max_length=100)
-    resort_aminities_3 = models.CharField(max_length=100)
-    resort_aminities_4 = models.CharField(max_length=100)
-    resort_aminities_5 = models.CharField(max_length=100)
-    resort_aminities_6 = models.CharField(max_length=100)
-    resort_aminities_7 = models.CharField(max_length=100)
-    resort_aminities_8 = models.CharField(max_length=100)
+    resort_aminities_3 = models.CharField(max_length=100,null=True,blank=True)
+    resort_aminities_4 = models.CharField(max_length=100,null=True,blank=True)
+    resort_aminities_5 = models.CharField(max_length=100,null=True,blank=True)
+    resort_aminities_6 = models.CharField(max_length=100,null=True,blank=True)
+    resort_aminities_7 = models.CharField(max_length=100,null=True,blank=True)
+    resort_aminities_8 = models.CharField(max_length=100,null=True,blank=True)
     resort_amount  = models.CharField(max_length=100)
     resort_images = models.ImageField(upload_to='Resort_Image') 
     resort_package = models.ForeignKey(Packages,on_delete=models.CASCADE)
     resort_slug = models.SlugField()
+
+    def save(self, *args, **kwargs):
+        if not self.resort_slug:
+            self.resort_slug = slugify(self.resort_name)
+        super(Resort, self).save(*args, **kwargs)
+
     class Meta:
         verbose_name_plural = 'Resort'
     

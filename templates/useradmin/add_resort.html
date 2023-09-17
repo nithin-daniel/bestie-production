@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Resort</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url "useradmin:dashboard" %}">Bestie Admin</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url "useradmin:dashboard" %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url "useradmin:add_resort" %}">Add Resort</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<div class="container">
+    <h1>Add your Resort</h1>
+    {% include 'includes/messages.html' %}
+
+    <form action="{% url "useradmin:add_resort" %}"  method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleInputEmail1">Resort Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Resort Name" name="resort_name" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Resort Desciption</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Resort Desciption"name="resort_description" required>
+          </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Resort Service 1</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service" name="resort_service1" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Resort Service 2</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service" name="resort_service2" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Resort Service 3</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service" name="resort_service3" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Resort Service 4</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service" name="resort_service4" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Resort Service 5</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service" name="resort_service5" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Resort Service 6</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service" name="resort_service6" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Resort Service 7</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service" name="resort_service7" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Resort Service 8</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service" name="resort_service8" >
+          </div>
+             <div class="form-group">
+                <label for="exampleInputPassword1">Resort Aminities 1</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities" name="resort_aminities1" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Resort Aminities 2</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities" name="resort_aminities2" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Resort Aminities 3</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities" name="resort_aminities3" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Resort Aminities 4</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities" name="resort_aminities4" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Resort Aminities 5</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities" name="resort_aminities5" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Resort Aminities 6</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities" name="resort_aminities6" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Resort Aminities 7</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities" name="resort_aminities7" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Resort Aminities 8</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities" name="resort_aminities8" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Resort Amount</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities" name="resort_amount" >
+            </div>
+            <div class="form-group">
+                <div class="mb-3">
+                    <label for="formFileSm" class="form-label">Resort Image</label>
+                    <input class="form-control form-control-sm" id="formFileSm" type="file" name="resort_image" required>
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Resort Package</label>
+                <select class="form-select" name="resort_package" aria-label="Default select example" required>
+                    <option selected name="resort_package" value="">Select the Package</option>
+                    {% for package in package %}
+                    <option value="{{ package.package_name }}">{{ package.package_name }}</option>
+                    {% endfor %}
+                  </select>         
+                 </div>
+        <button type="submit" class="btn btn-primary">Add Resort</button>
+      </form>
+</div>
+</body>
+</html>

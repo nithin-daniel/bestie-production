@@ -19,11 +19,12 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from useradmin.admin import bestie_admin
+# from useradmin.admin import bestie_admin
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('main.urls')),
-    path('useradmin/',bestie_admin.urls),
+    # path('useradmin/',bestie_admin.urls),
+    path('useradmin/',include('useradmin.urls'))
 ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
