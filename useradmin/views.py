@@ -10,9 +10,13 @@ from django.contrib.auth.decorators import login_required
 from main.models import Packages
 # Create your views here.
 def login(request):
+    if request.user.is_authenticated:
+        return redirect('useradmin:dashboard')
     return render(request,'useradmin/login.html')
 
 def verify(request):
+    if request.user.is_authenticated:
+        return redirect('useradmin:dashboard')
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -25,6 +29,9 @@ def verify(request):
             login_process(request,user)
             # return render(request,'useradmin/dashboard.html')
             return redirect('useradmin:dashboard')
+        else:
+            messages.error(request,'User Not Found')
+            return redirect('useradmin:login')
     return render(request,'useradmin/login.html')
 
 
