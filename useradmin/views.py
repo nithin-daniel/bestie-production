@@ -2,11 +2,11 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login as login_process ,logout
-from .models import SubUser,BestieAdmin
+from .models import SubUser
 from main.models import Resort
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import BestieForm
+# from .forms import BestieForm
 from main.models import Packages
 # Create your views here.
 def login(request):
@@ -61,10 +61,6 @@ def add_resort(request):
         resort_aminities_7 = request.POST['resort_aminities7']
         resort_aminities_8 = request.POST['resort_aminities8']
         resort_amount = request.POST['resort_amount']
-        # resort_add = BestieAdmin(resort_name=resort_name,resort_description=resort_description,resort_service=resort_service,resort_aminities=resort_aminities,resort_images=resort_image,resort_user=request.user)
-        # package = Packages.objects.filter(package_name=resort_package).first()
-        # resort_add.resort_package=package
-        # resort_add.save()
         resort_add = Resort(resort_name=resort_name,resort_description=resort_description,resort_images=resort_image,resort_service_1=resort_service_1,resort_service_2=resort_service_2,resort_service_3=resort_service_3,resort_service_4=resort_service_4,resort_service_5=resort_service_5,resort_service_6=resort_service_6,resort_service_7=resort_service_7,resort_service_8=resort_service_8,resort_aminities_1=resort_aminities_1,resort_aminities_2=resort_aminities_2,resort_aminities_3=resort_aminities_3,resort_aminities_4=resort_aminities_4,resort_aminities_5=resort_aminities_5,resort_aminities_6=resort_aminities_6,resort_aminities_7=resort_aminities_7,resort_aminities_8=resort_aminities_8,resort_amount=resort_amount,user=request.user)
         package = Packages.objects.filter(package_name=resort_package).first()
         resort_add.resort_package=package

@@ -1,6 +1,5 @@
 from django import forms
 from django.db.models import fields
-from .models import BestieAdmin
 
 class BestieForm(forms.ModelForm):
     class Meta:

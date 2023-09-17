@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'useradmin',
 ]
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -84,15 +82,15 @@ WSGI_APPLICATION = 'mybesties.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-       'NAME': BASE_DIR / 'db.sqlite3',
-   }
-}
 # DATABASES = {
-#     'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
 # }
+DATABASES = {
+    'default':dj_database_url.parse('postgres://mibestie_jebf_user:VSujwiPze38eWHHUICv37CcPwaeMVMwt@dpg-ck3l7l36fquc73ddsmq0-a.oregon-postgres.render.com/mibestie_jebf')
+}
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Password validation
