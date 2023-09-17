@@ -1,5 +1,6 @@
 from django.db import models
 from PIL import Image
+from django.conf import settings
 from django.utils.text import slugify
 # Create your models here.
 class Activity(models.Model):
@@ -109,7 +110,7 @@ class Resort(models.Model):
     resort_images = models.ImageField(upload_to='Resort_Image') 
     resort_package = models.ForeignKey(Packages,on_delete=models.CASCADE)
     resort_slug = models.SlugField()
-
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     def save(self, *args, **kwargs):
         if not self.resort_slug:
             self.resort_slug = slugify(self.resort_name)

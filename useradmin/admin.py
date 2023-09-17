@@ -7,7 +7,7 @@ from django.contrib import admin
 # bestie_admin = BestieAdminArea(name='Bestie Admin')
 
 # bestie_admin.register(BestieAdmin)
-from .models import SubUser,BestieAdmin
+from .models import SubUser
 from django.contrib.auth.admin import UserAdmin
 class CustomUserAdmin(UserAdmin):
     # Customize the fields to display in the admin interface
@@ -20,4 +20,3 @@ class CustomUserAdmin(UserAdmin):
     )
 
 admin.site.register(SubUser, CustomUserAdmin)
-admin.site.register(BestieAdmin)
