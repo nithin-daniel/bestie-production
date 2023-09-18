@@ -34,8 +34,9 @@
             $("#main_slider").revolution({
                 sliderType:"standard",
                 sliderLayout:"auto",
-                delay:400000,
+                delay:5000,
                 disableProgressBar:"on",
+                autoplay: true,
                 navigation: {
                     onHoverStop: 'off',
                     touch:{

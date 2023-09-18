@@ -132,45 +132,6 @@
         <!--================End Banner Area =================-->
         
         <!--================Explor Room Area =================-->
-        {% comment %} <section class="explor_room_area explore_room_list">
-            <div class="container">
-                <div class="explor_title row m0">
-                    <div class="left_ex_title">
-                        <h2>Explor Our <span>Resorts</span></h2>
-                        <p>choose a resort according to Your budget</p>
-                    </div>
-                </div>
-                <div class="row explor_room_item_inner">
-                    {% for get_resorts in get_resorts %}
-                    <div class="col-md-4 col-sm-6" style="display: inline-block;">
-                        <div class="explor_item" >
-                            <a href="{% url 'resort-detail' get_resorts.resort_slug %}" class="room_image">
-                                <img src="{{ get_resorts.resort_images.url }}" alt="">
-                            </a>
-                            <div class="explor_text">
-                                <a href="{% url 'resort-detail' get_resorts.resort_slug %}"><h4>{{ get_resorts.resort_name }}</h4></a>
-                                <ul>
-                                    <!-- <li><a href="room.html#">10x15</a></li>
-                                    <li><a href="room.html#">Mountain view</a></li>
-                                    <li><a href="room.html#">2 Balcony</a></li> -->
-                                    <p>{{ get_resorts.resort_description|truncatewords:20 }} </p>
-                                </ul>
-                                <div class="explor_footer">
-                                    <div class="pull-left">
-                                        <h3>₹{{ get_resorts.resort_amount }}<span>/ Night</span></h3>
-                                    </div>
-                                    <div class="pull-right">
-                                        <a class="book_now_btn" href="{% url 'resort-detail' get_resorts.resort_slug %}">View details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </section> {% endcomment %}
-
         <section class="explor_room_area explore_room_list">
             <div class="container">
                 <div class="explor_title row m0">
@@ -210,7 +171,6 @@
                     </div>   
                     {% endfor %}             
                 </div>
-                
             </div>
         </section>
         <!--================End Explor Room Area =================-->
