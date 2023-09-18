@@ -132,7 +132,7 @@
         <!--================End Banner Area =================-->
         
         <!--================Explor Room Area =================-->
-        <section class="explor_room_area explore_room_list">
+        {% comment %} <section class="explor_room_area explore_room_list">
             <div class="container">
                 <div class="explor_title row m0">
                     <div class="left_ex_title">
@@ -142,8 +142,8 @@
                 </div>
                 <div class="row explor_room_item_inner">
                     {% for get_resorts in get_resorts %}
-                    <div class="col-md-4 col-sm-6">
-                        <div class="explor_item">
+                    <div class="col-md-4 col-sm-6" style="display: inline-block;">
+                        <div class="explor_item" >
                             <a href="{% url 'resort-detail' get_resorts.resort_slug %}" class="room_image">
                                 <img src="{{ get_resorts.resort_images.url }}" alt="">
                             </a>
@@ -168,23 +168,49 @@
                     </div>
                     {% endfor %}
                 </div>
-                <!-- <nav aria-label="Page navigation" class="room_pagination">
-                    <ul class="pagination">
-                        <li>
-                            <a href="room.html#" aria-label="Previous">
-                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </div>
+        </section> {% endcomment %}
+
+        <section class="explor_room_area explore_room_list">
+            <div class="container">
+                <div class="explor_title row m0">
+                    <div class="left_ex_title">
+                        <h2>Explor Our <span>Resorts</span></h2>
+                        <p>choose a resort according to Your budget</p>
+                    </div>
+                </div>
+                <div class="row explor_room_item_inner">
+                    {% for get_resorts in get_resorts %}
+                    <div class="col-md-4 col-sm-6">
+                        <div class="explor_item">
+                            <a href="{% url 'resort-detail' get_resorts.resort_slug %}" class="room_image" style=" width: 370px;
+                            height: 295px;
+                            overflow: hidden;">
+                                <img src="{{ get_resorts.resort_images.url }}" alt="" style=" width: 100%;
+                                height: 100%;
+                                object-fit: cover;">
                             </a>
-                        </li>
-                        <li><a href="room.html#">1</a></li>
-                        <li><a href="room.html#">2</a></li>
-                        <li><a href="room.html#">3</a></li>
-                        <li>
-                            <a href="room.html#" aria-label="Next">
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav> -->
+                            <div class="explor_text">
+                                <a href="room-details.html"><h4>Budget room</h4></a>
+                                <ul>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href="">{{ get_resorts.resort_description|truncatewords:6 }}</a></li>
+                                </ul>
+                                <div class="explor_footer">
+                                    <div class="pull-left">
+                                        <h3>₹{{ get_resorts.resort_amount }} <span>/ Night</span></h3>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a class="book_now_btn" href="room-details.html">View details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                    {% endfor %}             
+                </div>
+                
             </div>
         </section>
         <!--================End Explor Room Area =================-->
