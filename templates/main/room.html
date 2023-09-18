@@ -7,8 +7,8 @@
         <div class="banner_inner_content">
             <h3>Couple Friendly Resorts</h3>
             <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="room.html">Resorts</a></li>
+                <li class="active"><a href="{% url "home" %}">Home</a></li>
+                <li><a href="">Resorts</a></li>
             </ul>
         </div>
     </div>
@@ -34,9 +34,9 @@
                     <div class="explor_text">
                         <a href="{% url 'room-details' get_resort.resort_name %}"><h4>{{ get_resort.resort_name }}</h4></a>
                         <ul>
-                            <li><a href="room.html#">10x15</a></li>
-                            <li><a href="room.html#">Mountain view</a></li>
-                            <li><a href="room.html#">2 Balcony</a></li>
+                            <li><a href="">10x15</a></li>
+                            <li><a href="">Mountain view</a></li>
+                            <li><a href="">2 Balcony</a></li>
                         </ul>
                         <div class="explor_footer">
                             <div class="pull-left">

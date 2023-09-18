@@ -150,9 +150,10 @@
                             <div class="explor_text">
                                 <a href="{% url 'resort-detail' get_resorts.resort_slug %}"><h4>{{ get_resorts.resort_name }}</h4></a>
                                 <ul>
-                                    <li><a href="room.html#">10x15</a></li>
+                                    <!-- <li><a href="room.html#">10x15</a></li>
                                     <li><a href="room.html#">Mountain view</a></li>
-                                    <li><a href="room.html#">2 Balcony</a></li>
+                                    <li><a href="room.html#">2 Balcony</a></li> -->
+                                    <p>{{ get_resorts.resort_description|truncatewords:20 }} </p>
                                 </ul>
                                 <div class="explor_footer">
                                     <div class="pull-left">

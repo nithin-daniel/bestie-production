@@ -72,8 +72,8 @@
                 <div class="banner_inner_content">
                     <h3>Activities at our Resorts</h3>
                     <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="activities.html">Activities</a></li>
+                        <li class="active"><a href="{% url "home" %}">Home</a></li>
+                        <li><a href="">Activities</a></li>
                     </ul>
                 </div>
             </div>
@@ -86,7 +86,6 @@
                 <div class="resort_title">
                     <h2>resort <span>Activities</span></h2>
                     <h5>Have lots of fun in our place</h5>
-                    <p>Equia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam. quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea volup.</p>
                 </div>
             </div>
         </section>
@@ -101,7 +100,7 @@
                 <div class="container">
                     <div class="row activities_item_row">
                         <div class="col-md-6">
-                            <a href="activities.html" class="activities_img">
+                            <a href="" class="activities_img">
                                 <img src="{{ obj.image.url }}" alt="">
                             </a>
                         </div>
@@ -121,7 +120,7 @@
                                 <h4>{{ words |slice:"-1"|join:" "|add:" " }}<span>{{ words|last}}</span></h4>                                     
                                 {% endwith %}
                                 {% endif %}
-                                <p>Equia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam. quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea volup.</p>
+                                <p>{{ obj.description }}</p>
                             </div>
                         </div>
                     </div>
@@ -141,7 +140,7 @@
                                 <h4>{{ words.0 | add:" "}}<span>{{ words|last }}</span></h4>                                     
                                 {% endwith %}
                                 {% endif %}
-                                <p>Equia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam. quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea volup.</p>
+                                <p>{{ obj.description }}</p>
                             </div>
                         </div>
                         <div class="col-md-6">
