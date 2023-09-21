@@ -477,6 +477,7 @@ i:before {
 
 .main_header_area.white_menu .header_menu .navbar.navbar-default .nav.navbar-nav.navbar-right .book_btn .book_now_btn {
   color: #fff;
+  border-radius: 10px;
 }
 
 .main_header_area.white_menu .header_menu.affix {
@@ -776,8 +777,11 @@ i:before {
   transition-duration: 0.5s;
   border: 2px solid #ffb606;
   margin-top: 21px;
+  border-radius: 10px;
 }
-
+/* .header_menu .navbar.navbar-default .nav.navbar-nav.navbar-right .book_btn .book_now_btn a{
+  border-radius: 10px;
+} */
 .header_menu .navbar.navbar-default .nav.navbar-nav.navbar-right .book_btn .book_now_btn:hover {
   color: #ffb606;
   background: transparent;

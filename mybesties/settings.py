@@ -82,15 +82,15 @@ WSGI_APPLICATION = 'mybesties.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-# }
 DATABASES = {
-    'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': BASE_DIR / 'db.sqlite3',
+   }
 }
+# DATABASES = {
+#     'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
+# }
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Password validation
@@ -127,23 +127,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-# STATIC_URL = '/static   /'
-# # STATIC_URL = '/static_root/'
-# # STATICFILES_DIRS = (
-# #   '/static_root/',
-# # )
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, "static"),
-# )
 
-STATIC_URL = "/static/"
-STATIC_ROOT = BASE_DIR / 'static'
-STATIC_FILE_ROOT = os.path.join(BASE_DIR, "static")
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR,"static"),
-# ]
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
 
 
 AUTH_USER_MODEL = 'useradmin.SubUser'
