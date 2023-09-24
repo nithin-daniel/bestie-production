@@ -105,6 +105,8 @@ class Resort(models.Model):
     resort_image_1 = models.ImageField(upload_to='Resort_Image') 
     resort_image_2 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
     resort_image_3 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
+    resort_image_4 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
+    resort_image_5 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
     resort_package = models.ForeignKey(Packages,on_delete=models.CASCADE)
     resort_slug = models.SlugField()
     user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)

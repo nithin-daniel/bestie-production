@@ -66,7 +66,6 @@ def resort_detail(request,package_slug):
     # get_package = Packages.objects.filter(package_slug=package_slug)
     # get_resort = Resort.objects.filter(resort_package__id__in=get_package).all()
     get_resort = Resort.objects.filter(resort_slug=package_slug)
-    print(get_resort)
     context = {
         'get_resort':get_resort,
     }
@@ -74,7 +73,6 @@ def resort_detail(request,package_slug):
 
 def room_detail(request,room_details):
     get_details = Resort.objects.filter(resort_package__package_slug=room_details)
-    print(get_details)
     context = {
         'get_resorts':get_details
     }

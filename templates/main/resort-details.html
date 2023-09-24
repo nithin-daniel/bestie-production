@@ -93,12 +93,26 @@
                             <div class="item">
                                 <img src="{{ get_resort.resort_image_1.url }}" alt="">
                             </div>
+                            {% if get_resort.resort_image_2 %}
                             <div class="item">
                                 <img src="{{ get_resort.resort_image_2.url }}" alt="">
                             </div>
+                            {% endif %}
+                            {% if  get_resort.resort_image_3 %}
                             <div class="item">
                                 <img src="{{ get_resort.resort_image_3.url }}" alt="">
                             </div>
+                            {% endif %}
+                            {% if  get_resort.resort_image_4 %}
+                            <div class="item">
+                                <img src="{{ get_resort.resort_image_3.url }}" alt="">
+                            </div>
+                            {% endif %}
+                            {% if  get_resort.resort_image_5 %}
+                            <div class="item">
+                                <img src="{{ get_resort.resort_image_3.url }}" alt="">
+                            </div>
+                            {% endif %}
                         </div>
                         <a href=""><h4>{{ get_resort.resort_name }}</h4></a>
                         <h5>₹{{ get_resort.resort_amount }} <span>/ Day</span></h5>

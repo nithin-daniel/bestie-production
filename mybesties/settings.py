@@ -29,7 +29,7 @@ DEBUG = True
 
 # # ALLOWED_HOSTS = ['127.0.0.1','mibestie.com']
 # ALLOWED_HOSTS = ['127.0.0.1','mibestie.com']
-ALLOWED_HOSTS = ["www.mibestie.com","mibesties.onrender.com"]
+ALLOWED_HOSTS = ["www.mibestie.com","mibesties.onrender.com","127.0.0.1"]
 # # Application definition
 # import socket
 
