@@ -34,7 +34,7 @@ import socket
 
 if socket.gethostname() == "mibestie.com":
     DEBUG = False
-    ALLOWED_HOSTS = [".mibestie.com",]
+    ALLOWED_HOSTS = ["www.mibestie.com"]
     ...
 else:
     DEBUG = True
