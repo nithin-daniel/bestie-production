@@ -1191,6 +1191,109 @@ i:before {
   background: #ffb606;
 }
 
+.reserve li .reserve_one{
+  display: inline-block;
+  border: 2px solid #fff;
+  padding: 24px 27px;
+  line-height: 46px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .28px;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: all 300ms linear !important;
+  -o-transition: all 300ms linear !important;
+  transition: all 300ms linear !important;
+  background-color: #FFCCCB;
+}
+.reserve li .reserve_two{
+  display: inline-block;
+  border: 2px solid #fff;
+  padding: 24px 27px;
+  line-height: 46px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .28px;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: all 300ms linear !important;
+  -o-transition: all 300ms linear !important;
+  transition: all 300ms linear !important;
+  background-color: #ADD8E6;
+}
+.reserve li .reserve_three{
+  display: inline-block;
+  border: 2px solid #fff;
+  padding: 24px 27px;
+  line-height: 46px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .28px;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: all 300ms linear !important;
+  -o-transition: all 300ms linear !important;
+  transition: all 300ms linear !important;
+  background-color: #90EE90;
+}
+.reserve li .reserve_four{
+  display: inline-block;
+  border: 2px solid #fff;
+  padding: 24px 27px;
+  line-height: 46px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .28px;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: all 300ms linear !important;
+  -o-transition: all 300ms linear !important;
+  transition: all 300ms linear !important;
+  background-color: #FFD580;
+}
+.reserve li{
+  display: inline-block;
+  cursor: pointer;
+  /* border: 2px solid #fff;
+  padding: 24px 27px;
+  line-height: 46px;
+  color: #000000;
+  font-size: 14px;
+  font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .28px;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: all 300ms linear !important;
+  -o-transition: all 300ms linear !important;
+  transition: all 300ms linear !important;
+  background-color: #FFD580; */
+}
+/* .reserve li:nth-child(1) {
+  background-color: #FFCCCB;
+}
+.reserve li:nth-child(2) {
+  background-color: #ADD8E6;
+}
+.reserve li:nth-child(3) {
+  background-color: #90EE90;
+}
+.reserve li:nth-child(4) {
+  background-color: #FFD580;
+} */
 .about_btn_b {
   display: inline-block;
   border: 1px solid #8e8e8e;

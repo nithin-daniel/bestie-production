@@ -910,6 +910,28 @@
 	.main_slider_area .book_table_area {
         top: 90%;
     }
+    /* .reserve{
+        display: block;
+    } */
+    /* .reserve{
+        width: 25%;
+        display: block;
+        margin-bottom: 20px;
+    } */
+    .reserve li:nth-child(1) {
+        background-color: #90EE90;    }
+    .reserve li:nth-child(2) {
+        background-color: #90EE90;
+    }
+    .reserve li:nth-child(3) {
+        background-color: #90EE90;
+        flex-direction: column;
+        
+    }
+    .reserve li:nth-child(4) {
+        background-color: #FFD580;
+        flex-direction: column;
+    }
 }
 @media(max-width: 500px){
     .clients_slider .item .media .media-left {

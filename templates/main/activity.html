@@ -44,12 +44,12 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li><a href="{% url 'home' %}">Home</a></li>
-                                <li><a href="{% url 'about-us' %}">About Us</a></li>
-                                <li><a href="{% url 'events' %}">Events</a></li>
-                                <li><a href="{% url 'resorts' %}">Resorts</a></li>
-                                <li><a href="{% url 'activity' %}">Activities</a></li>
-                                <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                                <li><a href="{% url 'contact-us' %}">Contact Us</a></li>
+                                <li><a href="{% url 'main:about-us' %}">About Us</a></li>
+                                <li><a href="{% url 'main:events' %}">Events</a></li>
+                                <li><a href="{% url 'main:resorts' %}">Resorts</a></li>
+                                <li><a href="{% url 'main:activity' %}">Activities</a></li>
+                                <li><a href="{% url 'main:gallery' %}">Gallery</a></li>
+                                <li><a href="{% url 'main:contact-us' %}">Contact Us</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <!-- <li class="search_dropdown">
@@ -72,7 +72,7 @@
                 <div class="banner_inner_content">
                     <h3>Activities at our Resorts</h3>
                     <ul>
-                        <li class="active"><a href="{% url "home" %}">Home</a></li>
+                        <li class="active"><a href="{% url "main:home" %}">Home</a></li>
                         <li><a href="">Activities</a></li>
                     </ul>
                 </div>

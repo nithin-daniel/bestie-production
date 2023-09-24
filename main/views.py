@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from main.models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort,Event,LatestNews,ContactUs
+from django.http import HttpResponse
 # Create your views here.
 def home(request):
     testimonials = ClientTestimonials.objects.all()
@@ -62,19 +63,22 @@ def success_page(request):
     return render(request,'main/success-page-popup.html')
 
 def resort_detail(request,package_slug):
+    # get_package = Packages.objects.filter(package_slug=package_slug)
+    # get_resort = Resort.objects.filter(resort_package__id__in=get_package).all()
     get_resort = Resort.objects.filter(resort_slug=package_slug)
+    print(get_resort)
     context = {
         'get_resort':get_resort,
     }
     return render(request,'main/resort-details.html',context)
 
 def room_detail(request,room_details):
-    get_details = Resort.objects.get(resort_name=room_details)
-    print(get_details.resort_images)
+    get_details = Resort.objects.filter(resort_package__package_slug=room_details)
+    print(get_details)
     context = {
-        'get_details':get_details
+        'get_resorts':get_details
     }
-    return render(request,'main/room-detail.html',context)
+    return render(request,'main/room.html',context)
 
 def events(request):
     get_events = Event.objects.all()
