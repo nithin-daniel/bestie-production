@@ -34,7 +34,7 @@ import socket
 
 if socket.gethostname() == "www.mibestie.com":
     DEBUG = False
-    ALLOWED_HOSTS = ["www.mibestie.com",]
+    ALLOWED_HOSTS = ["www.mibestie.com","mibesties.onrender.com"]
 else:
     DEBUG = True
     ALLOWED_HOSTS = ["localhost", "127.0.0.1",]
