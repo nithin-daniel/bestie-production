@@ -571,7 +571,7 @@ i:before {
 .header_menu .navbar.navbar-default .navbar-header .navbar-brand img {
   display: inline-block;
   /* width: 160px; */
-  width: 100%;
+  width: 47%;
 }
 
 .header_menu .navbar.navbar-default .navbar-header .navbar-brand img + img {
@@ -809,6 +809,9 @@ i:before {
 
 .header_menu.affix .navbar.navbar-default .navbar-header .navbar-brand img + img {
   display: inline-block;
+  height: 15rem;
+  width: 13rem;
+  padding: 0rem 0rem 6rem 0rem;
 }
 
 .header_menu.affix .navbar.navbar-default .nav.navbar-nav > li > a {
@@ -1160,6 +1163,7 @@ i:before {
   text-align: center;
   border: 2px solid #242424;
 }
+
 
 .book_now_btn_black:hover {
   color: #242424;
