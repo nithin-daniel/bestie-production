@@ -811,7 +811,7 @@ i:before {
   display: inline-block;
   height: 15rem;
   width: 13rem;
-  padding: 0rem 0rem 6rem 0rem;
+  padding: 0rem 5rem 8rem 0rem;
 }
 
 .header_menu.affix .navbar.navbar-default .nav.navbar-nav > li > a {
@@ -4057,6 +4057,7 @@ i:before {
 
 .resort_gallery .item, .resort_full_gallery .item {
   position: relative;
+  max-height: 22rem;
 }
 
 .resort_gallery .item .resort_g_hover, .resort_full_gallery .item .resort_g_hover {
@@ -4659,7 +4660,9 @@ i:before {
 }
 
 .blog_item .blog_img img {
-  max-width: 100%;
+  max-width: 25rem;
+  max-height: 32rem;
+
 }
 
 .blog_item .blog_img:before {
