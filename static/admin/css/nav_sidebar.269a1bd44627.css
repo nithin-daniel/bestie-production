@@ -95,7 +95,7 @@
 #nav-sidebar .current-app .section:link,
 #nav-sidebar .current-app .section:visited {
     color: var(--header-color);
-    font-weight: bold;
+    
 }
 
 #nav-sidebar .current-model {

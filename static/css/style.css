@@ -42,7 +42,7 @@ Table of Content:
 @font-face {
   font-family: 'GalanoGrotesqueAltDEMOBold';
   src: url('../fonts/FontsFree-Net-GalanoGrotesqueAltDEMOBold.ttf') format('truetype');
-  font-weight: bold;
+  
   font-style: normal;
 }
 
@@ -131,7 +131,7 @@ i:before {
 .intro_title h2 {
   font-size: 32px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   color: #ffb606;
   letter-spacing: .96px;
@@ -165,7 +165,7 @@ i:before {
 .left_ex_title h2 {
   font-size: 32px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   color: #ffb606;
   letter-spacing: .96px;
@@ -180,7 +180,7 @@ i:before {
   font-size: 14px;
   color: #a0a0a0;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   letter-spacing: .42px;
   padding-top: 10px;
@@ -189,7 +189,7 @@ i:before {
 .left_wh_title h2 {
   font-size: 32px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   color: #fff;
   letter-spacing: .96px;
@@ -205,7 +205,7 @@ i:before {
   font-size: 14px;
   color: #fff;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   letter-spacing: .42px;
 }
@@ -219,7 +219,7 @@ i:before {
   color: #242424;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
   font-size: 32px;
-  font-weight: bold;
+  
   letter-spacing: .96px;
   text-transform: uppercase;
   padding-bottom: 12px;
@@ -261,7 +261,7 @@ i:before {
 .center_title h2 {
   font-size: 32px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   color: #ffb606;
   letter-spacing: .96px;
@@ -290,7 +290,7 @@ i:before {
 .center_title h2 {
   font-size: 32px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   color: #ffb606;
   letter-spacing: .96px;
@@ -319,7 +319,7 @@ i:before {
 .center_w_title h2 {
   font-size: 32px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   color: #fff;
   letter-spacing: .96px;
@@ -350,7 +350,7 @@ i:before {
   color: #ffb606;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
   font-size: 32px;
-  font-weight: bold;
+  
   letter-spacing: .96px;
   text-transform: uppercase;
   padding-bottom: 15px;
@@ -400,7 +400,7 @@ i:before {
 
 .resort_title h2 {
   font-size: 32px;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
   letter-spacing: .96px;
   text-transform: uppercase;
@@ -416,7 +416,7 @@ i:before {
   font-size: 14px;
   color: #a0a0a0;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .42px;
   text-transform: uppercase;
 }
@@ -768,7 +768,7 @@ i:before {
   padding: 0px 25px;
   font-size: 14px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .28px;
   position: relative;
   z-index: 2;
@@ -854,7 +854,7 @@ i:before {
 .header_top_logo .header_top_l_inner .h_left_text a {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .6px;
   color: #fff;
   display: inline-block;
@@ -1126,7 +1126,7 @@ i:before {
   padding: 0px 25px;
   font-size: 14px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .28px;
   position: relative;
   z-index: 2;
@@ -1152,7 +1152,7 @@ i:before {
   padding: 0px 25px;
   font-size: 14px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .28px;
   position: relative;
   z-index: 2;
@@ -1306,7 +1306,7 @@ i:before {
   color: #000;
   font-size: 15px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   letter-spacing: .45px;
   font-weight: 600;
@@ -1331,7 +1331,7 @@ i:before {
   color: #fff;
   font-size: 15px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   letter-spacing: .45px;
   font-weight: 600;
@@ -1488,7 +1488,7 @@ i:before {
   text-align: center;
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   letter-spacing: .60px;
   display: inline-block;
@@ -1525,7 +1525,7 @@ i:before {
   text-align: center;
   color: #fff;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   font-size: 50px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -1960,7 +1960,7 @@ i:before {
 .right_contact_info .contact_info_title h3 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   color: #242424;
   letter-spacing: .6px;
   text-transform: uppercase;
@@ -1992,7 +1992,7 @@ i:before {
   font-size: 16px;
   text-transform: uppercase;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .32px;
   color: #242424;
   padding-bottom: 10px;
@@ -2383,7 +2383,7 @@ i:before {
   font-size: 16px;
   color: #363636;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   padding-top: 18px;
 }
@@ -2441,7 +2441,7 @@ i:before {
   font-size: 18px;
   color: #363636;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   padding-bottom: 20px;
   letter-spacing: .54px;
@@ -2513,7 +2513,7 @@ i:before {
 .introduction_item h4 {
   font-size: 16px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   color: #363636;
   letter-spacing: .48px;
   text-transform: uppercase;
@@ -2671,7 +2671,7 @@ i:before {
 .explor_item .explor_text h4 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .60px;
   color: #242424;
   text-transform: uppercase;
@@ -2715,7 +2715,7 @@ i:before {
 .explor_item .explor_text .explor_footer .pull-left h3 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   color: #242424;
   letter-spacing: .60px;
   padding-top: 10px;
@@ -2804,7 +2804,7 @@ i:before {
 .fun_fact_area .fun_fact_box .media .media-left h3 {
   font-size: 55px;
   color: #ffb606;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
   line-height: 50px;
 }
@@ -2818,7 +2818,7 @@ i:before {
   font-size: 15px;
   color: #898989;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   line-height: 20px;
 }
@@ -3090,7 +3090,7 @@ i:before {
 .discount_inner .discount_right_content h4 {
   font-size: 50px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -3158,7 +3158,7 @@ i:before {
   font-size: 50px;
   line-height: 53px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: 1.5px;
   color: #fff;
   padding: 20px 0px 15px 0px;
@@ -3167,7 +3167,7 @@ i:before {
 .error_area .error_inner_text_area .error_inner_text h5 {
   font-size: 25px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .75px;
   color: #fff;
   padding-bottom: 55px;
@@ -3178,7 +3178,7 @@ i:before {
   padding: 0px 40px;
   font-size: 22.75px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .445px;
 }
 
@@ -3223,7 +3223,7 @@ i:before {
 .aminities_list .aminities_item h4 {
   font-size: 18px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   color: #fff;
   letter-spacing: .36px;
@@ -3405,7 +3405,7 @@ i:before {
   color: #fff;
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   position: absolute;
   width: 100%;
@@ -3426,7 +3426,7 @@ i:before {
   color: #fff;
   font-size: 65px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   line-height: 130px;
 }
@@ -3473,7 +3473,7 @@ i:before {
   font-size: 32px;
   color: #fff;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .96px;
   padding-bottom: 17px;
   text-transform: uppercase;
@@ -3490,7 +3490,7 @@ i:before {
 .all_s_btn {
   font-size: 14px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .21px;
   color: #ffb606;
   text-transform: uppercase;
@@ -3580,7 +3580,7 @@ i:before {
   text-align: center;
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   letter-spacing: .6px;
   color: #fff;
@@ -3727,7 +3727,7 @@ i:before {
 .spa_item .spa_content h4 {
   font-size: 18px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   letter-spacing: .54px;
   color: #242424;
@@ -3765,7 +3765,7 @@ i:before {
   display: inline-block;
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   color: #242424;
   letter-spacing: .60px;
   padding-right: 28px;
@@ -3790,7 +3790,7 @@ i:before {
 .spa_area .spa_left_text h3 {
   font-size: 32px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   color: #242424;
   letter-spacing: .96px;
@@ -3981,7 +3981,7 @@ i:before {
 .activities_area .activities_item_inner .activities_item_row .activities_content h4 {
   color: #242424;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   font-size: 32px;
   letter-spacing: .96px;
@@ -4167,7 +4167,7 @@ i:before {
 .grid_gallery_inner .gallery_filter li a {
   font-size: 16px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .48px;
   text-transform: uppercase;
   color: #a0a0a0;
@@ -4411,13 +4411,13 @@ i:before {
   font-style: normal;
   position: relative;
   bottom: -42px;
-  font-weight: bold;
+  
 }
 
 .clients_slider .item .media .media-body h4 {
   color: #ffb606;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: .54px;
@@ -4530,7 +4530,7 @@ i:before {
   font-size: 15px;
   color: #a0a0a0;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .45px;
   text-transform: uppercase;
   padding: 25px 0px 8px 0px;
@@ -4540,7 +4540,7 @@ i:before {
 .l_news_item .news_text h4 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .40px;
   color: #242424;
   -webkit-transition: all 300ms linear 0s;
@@ -4566,7 +4566,7 @@ i:before {
   color: #ffb606;
   text-transform: uppercase;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .28px;
   -webkit-transition: all 300ms linear 0s;
   -o-transition: all 300ms linear 0s;
@@ -4607,7 +4607,7 @@ i:before {
   text-align: center;
   font-size: 40px;
   color: #ffb606;
-  font-weight: bold;
+  
   line-height: 30px;
   text-transform: uppercase;
   padding-top: 10px;
@@ -4629,7 +4629,7 @@ i:before {
   line-height: 28px;
   color: #242424;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   padding-right: 10px;
   -webkit-transition: all 300ms linear 0s;
@@ -4703,7 +4703,7 @@ i:before {
   font-size: 20px;
   text-transform: uppercase;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .4px;
   color: #242424;
   padding: 40px 0px 20px 0px;
@@ -4805,7 +4805,7 @@ i:before {
 .two_column_sample h3 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   color: #242424;
   letter-spacing: .6px;
   text-transform: uppercase;
@@ -4874,7 +4874,7 @@ i:before {
 
 .s_main_text p strong {
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   font-style: italic;
 }
 
@@ -4891,7 +4891,7 @@ i:before {
   font-size: 22px;
   text-transform: uppercase;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .66px;
   color: #242424;
   padding-bottom: 30px;
@@ -4988,7 +4988,7 @@ i:before {
   font-size: 22px;
   text-transform: uppercase;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .66px;
   color: #242424;
   padding-bottom: 28px;
@@ -5115,7 +5115,7 @@ i:before {
 .r_widget_title h3 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   color: #242424;
 }
@@ -5188,7 +5188,7 @@ i:before {
   transition: all 300ms linear 0s;
   text-transform: uppercase;
   letter-spacing: .28px;
-  font-weight: bold;
+  
 }
 
 .categories_widget ul li a i {
@@ -5225,7 +5225,7 @@ i:before {
   -webkit-transition: all 300ms linear 0s;
   -o-transition: all 300ms linear 0s;
   transition: all 300ms linear 0s;
-  font-weight: bold;
+  
 }
 
 .recent_widget .recent_inner .recent_item h4:hover {
@@ -5237,7 +5237,7 @@ i:before {
   font-size: 15px;
   color: #9a9a9a;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   padding-top: 15px;
 }
 
@@ -5349,7 +5349,7 @@ i:before {
   text-transform: uppercase;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
   font-size: 32px;
-  font-weight: bold;
+  
   letter-spacing: .96px;
   padding-bottom: 5px;
 }
@@ -5359,7 +5359,7 @@ i:before {
   text-transform: uppercase;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
   font-size: 32px;
-  font-weight: bold;
+  
   letter-spacing: .96px;
 }
 
@@ -5406,7 +5406,7 @@ i:before {
 .banner_inner_content ul li a {
   font-size: 13px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .39px;
   text-transform: uppercase;
   color: #fff;
@@ -5516,7 +5516,7 @@ i:before {
   font-size: 40px;
   color: #ffb606;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: 1.2px;
   padding-bottom: 4px;
 }
@@ -5525,7 +5525,7 @@ i:before {
   font-size: 16px;
   color: #ffb606;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .48px;
   text-transform: uppercase;
 }
@@ -5539,7 +5539,7 @@ i:before {
   color: #242424;
   line-height: 28px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   letter-spacing: .60px;
   -webkit-transition: all 300ms linear 0s;
@@ -5596,7 +5596,7 @@ i:before {
 .event_details_main h4 {
   font-size: 28px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   line-height: 38px;
   letter-spacing: .84px;
@@ -5607,7 +5607,7 @@ i:before {
 .event_details_main h5 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .6px;
   text-transform: uppercase;
   padding-bottom: 12px;
@@ -5624,7 +5624,7 @@ i:before {
 .event_about h4 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .6px;
   text-transform: uppercase;
   padding-bottom: 25px;
@@ -5645,7 +5645,7 @@ i:before {
 .map_location h4 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .6px;
   text-transform: uppercase;
   padding-bottom: 25px;
@@ -5670,7 +5670,7 @@ i:before {
 .event_details_right .media .media-body h4 {
   font-size: 15px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .45px;
   color: #202020;
   text-transform: uppercase;
@@ -5787,7 +5787,7 @@ i:before {
   font-size: 40px;
   color: #ffb606;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: 1.2px;
   padding-bottom: 4px;
 }
@@ -5796,7 +5796,7 @@ i:before {
   font-size: 16px;
   color: #ffb606;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .48px;
   text-transform: uppercase;
 }
@@ -5807,7 +5807,7 @@ i:before {
 
 .event_two_item .event_two_text .media .media-body h4 {
   font-size: 20px;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
   letter-spacing: .60px;
   line-height: 28px;
@@ -5885,7 +5885,7 @@ i:before {
 .room_list_item .room_list_l_text h4 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   color: #242424;
   letter-spacing: .60px;
@@ -5976,7 +5976,7 @@ i:before {
 .room_list_item .room_price_box h5 {
   font-size: 30px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   color: #242424;
   letter-spacing: .90px;
 }
@@ -5985,7 +5985,7 @@ i:before {
   font-size: 16px;
   color: #a0a0a0;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   padding: 8px 0px 30px 0px;
 }
@@ -6137,7 +6137,7 @@ i:before {
 .search_right_sidebar .your_book_box h4 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   color: #242424;
   text-transform: uppercase;
   letter-spacing: .60px;
@@ -6177,7 +6177,7 @@ i:before {
 .s_room_item .s_room_right_text h4 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   color: #242424;
   letter-spacing: .60px;
@@ -6193,7 +6193,7 @@ i:before {
   text-transform: uppercase;
   color: #a0a0a0;
   letter-spacing: .42px;
-  font-weight: bold;
+  
 }
 
 .s_room_item .s_room_right_text ul li a {
@@ -6202,7 +6202,7 @@ i:before {
   text-transform: uppercase;
   color: #a0a0a0;
   letter-spacing: .42px;
-  font-weight: bold;
+  
 }
 
 .s_room_item .s_room_right_text ul li a span {
@@ -6232,7 +6232,7 @@ i:before {
 .s_room_item .s_room_right_text ul li .bootstrap-select .dropdown-toggle span {
   color: #ffb606;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   font-size: 15px;
   letter-spacing: .45px;
 }
@@ -6324,7 +6324,7 @@ i:before {
 .room_d_main_text h4 {
   font-size: 32px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   letter-spacing: .96px;
   color: #242424;
@@ -6338,7 +6338,7 @@ i:before {
 .room_d_main_text h5 {
   font-size: 20px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   text-transform: uppercase;
   letter-spacing: .60px;
   color: #242424;
@@ -6365,7 +6365,7 @@ i:before {
   text-transform: uppercase;
   font-size: 22px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .66px;
   color: #242424;
   padding-bottom: 30px;
@@ -6425,7 +6425,7 @@ i:before {
 .room_details_comment h4 {
   font-size: 15px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   color: #ffb606;
   text-transform: uppercase;
   letter-spacing: .45px;
@@ -6435,70 +6435,70 @@ i:before {
 .room_details_comment .contact_us_form .form-group input {
   font-size: 15px;
   color: #898989;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
 }
 
 .room_details_comment .contact_us_form .form-group input.placeholder {
   font-size: 15px;
   color: #898989;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
 }
 
 .room_details_comment .contact_us_form .form-group input:-moz-placeholder {
   font-size: 15px;
   color: #898989;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
 }
 
 .room_details_comment .contact_us_form .form-group input::-moz-placeholder {
   font-size: 15px;
   color: #898989;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
 }
 
 .room_details_comment .contact_us_form .form-group input::-webkit-input-placeholder {
   font-size: 15px;
   color: #898989;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
 }
 
 .room_details_comment .contact_us_form .form-group textarea {
   font-size: 15px;
   color: #898989;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
 }
 
 .room_details_comment .contact_us_form .form-group textarea.placeholder {
   font-size: 15px;
   color: #898989;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
 }
 
 .room_details_comment .contact_us_form .form-group textarea:-moz-placeholder {
   font-size: 15px;
   color: #898989;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
 }
 
 .room_details_comment .contact_us_form .form-group textarea::-moz-placeholder {
   font-size: 15px;
   color: #898989;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
 }
 
 .room_details_comment .contact_us_form .form-group textarea::-webkit-input-placeholder {
   font-size: 15px;
   color: #898989;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
 }
 
@@ -6566,7 +6566,7 @@ i:before {
 .special_dish_item h4 {
   font-size: 18px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   color: #242424;
   text-transform: uppercase;
   letter-spacing: .45px;
@@ -6667,7 +6667,7 @@ i:before {
   color: #242424;
   text-transform: uppercase;
   letter-spacing: .36px;
-  font-weight: bold;
+  
   padding-bottom: 10px;
   padding-top: 35px;
 }
@@ -6682,7 +6682,7 @@ i:before {
 
 .our_menu_list_inner .tab-content .tab-pane .our_menu_tab_inner ul li .pull-right h3 {
   font-size: 40px;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
   color: #ffb606;
   letter-spacing: 1.2px;
@@ -6703,7 +6703,7 @@ i:before {
 }
 
 .reserv_table_text h3 {
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
   text-transform: uppercase;
   font-size: 32px;
@@ -6730,7 +6730,7 @@ i:before {
   color: #fff;
   font-size: 15px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .45px;
 }
 
@@ -6738,7 +6738,7 @@ i:before {
   color: #fff;
   font-size: 15px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .45px;
 }
 
@@ -6746,7 +6746,7 @@ i:before {
   color: #fff;
   font-size: 15px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .45px;
 }
 
@@ -6754,7 +6754,7 @@ i:before {
   color: #fff;
   font-size: 15px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .45px;
 }
 
@@ -6762,7 +6762,7 @@ i:before {
   color: #fff;
   font-size: 15px;
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
-  font-weight: bold;
+  
   letter-spacing: .45px;
 }
 
@@ -6832,7 +6832,7 @@ i:before {
 
 .about_widget .ab_wd_list .media:last-child .media-body h4 {
   font-size: 20px;
-  font-weight: bold;
+  
   font-family: "GalanoGrotesqueAltDEMOBold", sans-serif;
   letter-spacing: .40px;
 }

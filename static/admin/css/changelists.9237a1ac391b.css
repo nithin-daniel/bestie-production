@@ -169,7 +169,7 @@
 
 #changelist-filter details > summary::before {
     content: '→';
-    font-weight: bold;
+    
     color: var(--link-hover-color);
 }
 
@@ -228,7 +228,7 @@
     padding-bottom: 5px;
     flex-wrap: wrap;
     gap: 3px 17px;
-    font-weight: bold;
+    
 }
 
 .change-list .toplinks a {
