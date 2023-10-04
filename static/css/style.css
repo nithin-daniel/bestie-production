@@ -2622,7 +2622,18 @@ i:before {
 .explor_item {
   background: #fff;
 }
-
+.card_1{
+  background-color: #FFCCCB;
+}
+.card_2{
+  background-color: #ADD8E6;
+}
+.card_3{
+  background-color: #90EE90;
+}
+.card_4{
+  background-color: #FFD580;
+}
 .explor_item .room_image {
   position: relative;
   display: block;
@@ -2653,7 +2664,7 @@ i:before {
 .explor_item .explor_text {
   overflow: hidden;
   padding: 35px 35px 35px 35px;
-  -webkit-box-shadow: 0px 3px 35px 0px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 0px 3px 60px 0px rgba(0, 0, 0, 0.09);
   box-shadow: 0px 3px 35px 0px rgba(0, 0, 0, 0.09);
 }
 

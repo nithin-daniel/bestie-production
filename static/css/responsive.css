@@ -975,6 +975,7 @@
     }
 }
 @media(max-width: 480px){
+    
     .introduction_area.intro_area2 .introduction_inner .introduction_left_text .intro_box_item_area .col-xs-4 {
         width: 100%;
     }

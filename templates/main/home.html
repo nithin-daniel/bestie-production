@@ -50,7 +50,7 @@
         font-size: 14px;
         border-radius: 50%;
         border: 0 none;
-        background: #fff;
+        background: #ffb606;
         color: black;
         cursor: pointer;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -189,8 +189,8 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="{% url 'main:home' %}">
-                        <img src="{% static 'img/Bestie.png' %}" alt="">
-                        <img src="{% static 'img/Bestie.png' %}" alt="">
+                        <img src="{% static 'img/Custom Size - 2.png' %}" alt="">
+                        <img src="{% static 'img/Custom Size - 2.png' %}" alt="">
                     </a>
                 </div>
 
@@ -470,8 +470,8 @@
         <div class="row explor_room_item_inner">
 
             {% for packages in packages %}
-            <div class="col-md-4 col-sm-6">
-                <div class="explor_item">
+            <div class="col-md-4 col-sm-6" style="padding-bottom: 2em;">
+                <div class="{% cycle 'explor_item card_1' 'explor_item card_2' 'explor_item card_3' 'explor_item card_4' %}">
                     <a href="{% url 'main:room-details' packages.package_slug %}" class="room_image">
                         <img src="{{ packages.package_image.url }}" alt="">
                     </a>
@@ -480,17 +480,18 @@
                             <h4>{{ packages.package_name }}</h4>
                         </a>
                         <ul>
-                            <li><a href="">{{ packages.package_description }}</a></li>
+                            <li><a href="">{{ packages.package_description | truncatewords:5 }}</a></li>
                             <!-- <li><a href="">Mountain view</a></li>
                                     <li><a href="">2 Balcony</a></li> -->
                         </ul>
                         <div class="explor_footer">
-                            <div class="pull-left">
-                                <h3>₹1500<span>/ Day</span></h3>
-                            </div>
-                            <div class="pull-right">
+                            <div class="pull-left" style="border-radius: 10px;">
+                                <!-- <h3>₹1500<span>/ Day</span></h3> -->
                                 <a class="book_now_btn" href="{% url 'main:room-details' packages.package_slug %}">View
                                     Resorts</a>
+                            </div>
+                            <div class="pull-right">
+                                <a class="book_now_btn" href="tel:+917689004008">Call</a>
                             </div>
                         </div>
                     </div>
@@ -505,7 +506,7 @@
 <!--================End Explor Room Area =================-->
 
 <!--================Card Area =================-->
-<div class="card-area">
+<!-- <div class="card-area">
     <div class="card red">
         <a href="{% url 'main:events' %}">
             <div class="card-content">
@@ -533,9 +534,10 @@
             </div>
         </a>
     </div>
-</div>
+</div> -->
 
-<!--================End Card Area =================-->
+<!-- ================End Card Area ================= -->
+
 <!--================Introduction Area =================-->
 <section class="introduction_area">
     <div class="container">
@@ -545,17 +547,12 @@
                     <div class="intro_title">
                         <h2>Why Choose <span>Us</span></h2>
                         <p>
-                            Welcome to Bestie, your ultimate destination for a memorable and enchanting stay in the
-                            heart of Wayanad, Kerala. Nestled amidst the lush green landscapes and pristine beauty of
-                            this breathtaking region, Bestie offers you an unparalleled experience of serenity, luxury,
-                            and warm hospitality. </p>
+                            Welcome to Mibesties Resorts and Hotels, your gateway to an unforgettable Wayanad experience. Our collection of unique properties is thoughtfully designed to provide you with the perfect blend of luxury, adventure, and tranquility amidst the stunning landscapes of Wayanad, Kerala. </p>
                     </div>
                     <h4>
-                        Your Wayanad Adventure Awaits
+                        Wayanad Adventures Await
                     </h4>
-                    <p>Whether you're an intrepid explorer or a leisure seeker, Wayanad has something to offer everyone,
-                        and Bestie is your trusted companion on this journey. Come, immerse yourself in the magic of
-                        Wayanad, and let us be your best friend on this unforgettable adventure.</p>
+                    <p>Wayanad is a treasure trove of natural wonders, and Mibesties is your trusted companion in exploring this paradise. Whether you're interested in trekking through the Western Ghats, embarking on wildlife safaris, or simply unwinding by the serene lakes, we offer a range of activities to enhance your Wayanad experience.</p>
                     <a class="about_btn_b" href="{% url "main:about-us" %}">More About us</a>
                 </div>
             </div>
@@ -658,7 +655,7 @@
             {% endfor %}
         </div>
         <div class="book_btn" style="padding-left: 50%;">
-            <a class="book_now_btn" style="border-radius: 10px;" href="https://www.batheco.com/">Read Our Reviews</a>
+            <a class="book_now_btn" style="border-radius: 10px;" href="https://maps.app.goo.gl/BPaPD65DqJvJgPVVA">Read Our Reviews</a>
         </div>
     </div>
 </section>
@@ -734,48 +731,7 @@
 <section class="fun_fact_area">
     <div class="container">
         <div class="row">
-            <div class="fun_fact_box row m0">
-                <div class="col-md-3 col-sm-6">
-                    <div class="media">
-                        <div class="media-left">
-                            <h3 class="counter">712</h3>
-                        </div>
-                        <div class="media-body">
-                            <h4>new <br /> friendships</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="media">
-                        <div class="media-left">
-                            <h3 class="counter">254</h3>
-                        </div>
-                        <div class="media-body">
-                            <h4>International <br /> Guests</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="media">
-                        <div class="media-left">
-                            <h3 class="counter">430</h3>
-                        </div>
-                        <div class="media-body">
-                            <h4>five stars <br /> rating</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="media">
-                        <div class="media-left">
-                            <h3 class="counter">782</h3>
-                        </div>
-                        <div class="media-body">
-                            <h4>Served <br /> Breakfast</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
         </div>
         <div class="row fun_subscrib_inner">
             <div class="col-md-5">
@@ -812,7 +768,7 @@
                                     <i class="fa fa-map-marker"></i>
                                 </div>
                                 <div class="media-body">
-                                    <h4>Wayanad, Kerala, India, 679327.</h4>
+                                    <h4>Gudalai, Kairali Nagar, Kalpetta, Kerala 673121</h4>
                                 </div>
                             </div>
                             <div class="media">
@@ -864,9 +820,7 @@
                         </div>
                         <ul class="instagram_list" id="instafeed"></ul>
                         <div style="overflow:hidden;resize:none;max-width:100%;width:300px;height:200px;">
-                            <div id="my-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe
-                                    style="height:100%;width:100%;border:0;" frameborder="0"
-                                    src="https://www.google.com/maps/embed/v1/place?q=batheco,+PO,+Kuzhivelippady,+Kochi,+Kerala,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                            <div id="my-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.081109042256!2d76.0888628!3d11.617567600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba60d3210ae4983%3A0xbc05074dde859791!2sBESTIE!5e0!3m2!1sen!2sin!4v1696436183273!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div><a class="googlemaps-made" rel="nofollow" href="https://www.bootstrapskins.com/themes"
                                 id="grab-maps-authorization">premium bootstrap themes</a>
                             <style>
