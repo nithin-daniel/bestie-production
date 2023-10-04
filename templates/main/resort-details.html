@@ -322,10 +322,14 @@
                             </div>
                             {% endif %}
                         </div>
+                        <div class="book_btn" style="margin-top: 10px;">
+                            <a class="book_now_btn" href="{% url 'main:gallery' %}">View More Photos</a>
+                        </div>
                         <a href=""><h4>{{ get_resort.resort_name }}</h4></a>
                         <h5>₹{{ get_resort.resort_amount }} <span>/ Day</span></h5>
                         <p>{{ get_resort.resort_description }}</p>
                     </div>
+
                     <div class="room_service_list">
                         <h3 class="room_d_title">Room services</h3>
                         <div class="row room_service_list_inner">
@@ -486,7 +490,6 @@
                         <ul>
                             <li><a href="">-  About Us</a></li>
                             <li><a href="">-  Faq’s</a></li>
-                            <li><a href="">-  Blog</a></li>
                             <li><a href="">-  Testimonials</a></li>
                             <li><a href="">-  Reservation Now</a></li>
                         </ul>
@@ -501,7 +504,6 @@
                             <li><a href="">-  Food & Drinks</a></li>
                             <li><a href="">-  Rooms</a></li>
                             <li><a href="">-  Amenities</a></li>
-                            <li><a href="">-  Spa & Gym</a></li>
                             <li><a href="">-  Hill Tours</a></li>
                         </ul>
                     </aside>
