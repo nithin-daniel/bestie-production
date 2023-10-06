@@ -571,7 +571,7 @@ i:before {
 .header_menu .navbar.navbar-default .navbar-header .navbar-brand img {
   display: inline-block;
   /* width: 160px; */
-  width: 47%;
+  width: 51%;
 }
 
 .header_menu .navbar.navbar-default .navbar-header .navbar-brand img + img {
@@ -809,9 +809,9 @@ i:before {
 
 .header_menu.affix .navbar.navbar-default .navbar-header .navbar-brand img + img {
   display: inline-block;
-  height: 15rem;
-  width: 13rem;
-  padding: 0rem 5rem 8rem 0rem;
+  height: 19rem;
+  width: 32rem;
+  padding: 0rem 2rem 9rem 0rem;
 }
 
 .header_menu.affix .navbar.navbar-default .nav.navbar-nav > li > a {
