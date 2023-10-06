@@ -2640,7 +2640,7 @@ i:before {
 }
 
 .explor_item .room_image img {
-  max-width: 100%;
+  max-width: 29.3rem;
 }
 
 .explor_item .room_image:before {
