@@ -290,9 +290,9 @@
 
 <!--================Search Room Area =================-->
 <section class="room_details_area">
+    {% if get_resort %}
+    {% for get_resort in get_resort %}
     <div class="container">
-        {% if get_resort %}
-        {% for get_resort in get_resort %}
         <div class="row room_details_inner">
             <div class="col-md-8">
                 <div class="room_details_content">
@@ -444,10 +444,9 @@
                 </div>
             </div>
         </div>
-        {% endfor %}
-
-        {% endif %}
     </div>
+        {% endfor %}
+        {% endif %}
 </section>
 <!--================End Search Room Area =================-->
 
