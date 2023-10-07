@@ -14,6 +14,7 @@ from pathlib import Path
 import psycopg2
 import dj_database_url
 from django.contrib import messages
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -63,6 +64,9 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
 ROOT_URLCONF = 'mybesties.urls'
 
 TEMPLATES = [
@@ -99,7 +103,7 @@ WSGI_APPLICATION = 'mybesties.wsgi.application'
 #    }
 # }
 DATABASES = {
-    'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default':dj_database_url.parse(config("DATABASE_URL"))
 }
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
@@ -141,7 +145,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT =  '/opt/render/project/src/media'
 MEDIA_URL = '/media/'
 
 
