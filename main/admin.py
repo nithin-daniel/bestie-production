@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort,Event,LatestNews,ContactUs
+from .models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort,Event,LatestEvents,ContactUs
 # Register your models here.
 admin.site.register(Activity)
 admin.site.register(ClientTestimonials)
@@ -11,5 +11,5 @@ class ResortAdmin(admin.ModelAdmin):
     prepopulated_fields = {"resort_slug": ("resort_name",)}
 admin.site.register(Resort,ResortAdmin)
 admin.site.register(Event)
-admin.site.register(LatestNews)
+# admin.site.register(LatestEvents)
 admin.site.register(ContactUs)

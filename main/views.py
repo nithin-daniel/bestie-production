@@ -1,12 +1,12 @@
 from django.shortcuts import render,redirect
-from main.models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort,Event,LatestNews,ContactUs
+from main.models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort,Event,LatestEvents,ContactUs
 from django.http import HttpResponse
 # Create your views here.
 def home(request):
     testimonials = ClientTestimonials.objects.all()
     packages = Packages.objects.all()
     events = Event.objects.all()[:2]
-    latest_news = LatestNews.objects.all()[:2]
+    latest_news = LatestEvents.objects.all()[:2]
     images = GalleryPhotos.objects.all()
 
     context = {

@@ -46,7 +46,7 @@ def dashboard(request):
 
 @login_required()
 def add_resort(request):
-    if request.method == 'POST' and request.FILES['resort_image']:
+    if request.method == 'POST' and request.FILES['resort_image_1']:
         resort_name = request.POST['resort_name']
         resort_description = request.POST['resort_description']
         resort_service_1 = request.POST['resort_service1']
@@ -57,7 +57,11 @@ def add_resort(request):
         resort_service_6 = request.POST['resort_service6']
         resort_service_7 = request.POST['resort_service7']
         resort_service_8 = request.POST['resort_service8']
-        resort_image = request.FILES['resort_image']
+        resort_image_1 = request.FILES['resort_image_1']
+        resort_image_2 = request.FILES['resort_image_2']
+        resort_image_3 = request.FILES['resort_image_3']
+        resort_image_4 = request.FILES['resort_image_4']
+        resort_image_5 = request.FILES['resort_image_5']
         resort_package = request.POST.get('resort_package')
         resort_aminities_1 = request.POST['resort_aminities1']
         resort_aminities_2 = request.POST['resort_aminities2']
@@ -68,7 +72,7 @@ def add_resort(request):
         resort_aminities_7 = request.POST['resort_aminities7']
         resort_aminities_8 = request.POST['resort_aminities8']
         resort_amount = request.POST['resort_amount']
-        resort_add = Resort(resort_name=resort_name,resort_description=resort_description,resort_images=resort_image,resort_service_1=resort_service_1,resort_service_2=resort_service_2,resort_service_3=resort_service_3,resort_service_4=resort_service_4,resort_service_5=resort_service_5,resort_service_6=resort_service_6,resort_service_7=resort_service_7,resort_service_8=resort_service_8,resort_aminities_1=resort_aminities_1,resort_aminities_2=resort_aminities_2,resort_aminities_3=resort_aminities_3,resort_aminities_4=resort_aminities_4,resort_aminities_5=resort_aminities_5,resort_aminities_6=resort_aminities_6,resort_aminities_7=resort_aminities_7,resort_aminities_8=resort_aminities_8,resort_amount=resort_amount,user=request.user)
+        resort_add = Resort(resort_name=resort_name,resort_description=resort_description,resort_image_1=resort_image_1,resort_image_2=resort_image_2,resort_image_3=resort_image_3,resort_image_4=resort_image_4,resort_image_5=resort_image_5,resort_service_1=resort_service_1,resort_service_2=resort_service_2,resort_service_3=resort_service_3,resort_service_4=resort_service_4,resort_service_5=resort_service_5,resort_service_6=resort_service_6,resort_service_7=resort_service_7,resort_service_8=resort_service_8,resort_aminities_1=resort_aminities_1,resort_aminities_2=resort_aminities_2,resort_aminities_3=resort_aminities_3,resort_aminities_4=resort_aminities_4,resort_aminities_5=resort_aminities_5,resort_aminities_6=resort_aminities_6,resort_aminities_7=resort_aminities_7,resort_aminities_8=resort_aminities_8,resort_amount=resort_amount,user=request.user)
         package = Packages.objects.filter(package_name=resort_package).first()
         resort_add.resort_package=package
         resort_add.save()

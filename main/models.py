@@ -32,7 +32,7 @@ class ClientTestimonials(models.Model):
     
     
 class GalleryPhotos(models.Model):
-    gallery_image = models.ImageField(upload_to='gallery_photos')
+    gallery_image = models.ImageField(upload_to='gallery_photos',help_text="Upload only 740x493 pixels image")
     class Meta:
         verbose_name_plural = 'Gallery Photos'
 
@@ -137,14 +137,14 @@ class Event(models.Model):
         return self.event_name
 
 
-class LatestNews(models.Model):
+class LatestEvents(models.Model):
     news_title = models.CharField(max_length=100)
     news_date = models.DateField()
     news_description = models.TextField()
     new_image = models.ImageField(upload_to='New Imges/')
 
     class Meta:
-        verbose_name_plural = 'Latest News'
+        verbose_name_plural = 'Latest Events'
 
     def __str__(self):
         return self.news_title

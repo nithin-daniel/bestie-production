@@ -654,14 +654,14 @@
             </div>
             {% endfor %}
         </div>
-        <div class="book_btn" style="padding-left: 50%;">
-            <a class="book_now_btn" style="border-radius: 10px;" href="https://maps.app.goo.gl/BPaPD65DqJvJgPVVA">Read Our Reviews</a>
+        <div class="book_btn" style="margin: auto;width: 18%;">
+            <a class="book_now_btn" style="border-radius: 10px;margin-top: 20%;" href="https://maps.app.goo.gl/BPaPD65DqJvJgPVVA"target="_blank">Read Our Reviews</a>
         </div>
     </div>
 </section>
 <!--================End Client Testimonial Area =================-->
 
-<!--================Latest News Area =================-->
+<!--================Latest Events Area =================-->
 <section class="latest_news_area">
     <div class="container">
         <div class="row">
@@ -670,19 +670,19 @@
                     <div class="left_ex_title">
                         <h2>Latest <span>Events</span></h2>
                     </div>
-                    {% for latest_news in latest_news %}
+                    {% for latest_news in events %}
                     <div class="col-sm-6">
                         <div class="l_news_item">
                             <a href="" class="news_img">
-                                <img src="{% static 'img/blog/latest-news/l-news-1.jpg' %}" alt="">
+                                <img src="{{ latest_news.event_photo.url }}" alt="">
                             </a>
                             <div class="news_text">
-                                <a class="l_date" href="">{{ latest_news.news_date }}</a>
+                                <a class="l_date" href="">{{ latest_news.event_date }}</a>
                                 <a href="">
-                                    <h4>{{ latest_news.news_title }}</h4>
+                                    <h4>{{ latest_news.event_name }}</h4>
                                 </a>
-                                <p>{{ latest_news.news_description }}</p>
-                                <a class="news_more" href="">Read more</a>
+                                <p>{{ latest_news.event_description }}</p>
+                                <a class="news_more" href="{% url 'main:events' %}">Read more</a>
                             </div>
                         </div>
                     </div>
@@ -804,7 +804,7 @@
                             <h3>our services</h3>
                         </div>
                         <ul>
-                            <li><a href="">- </a></li>
+                            
                             <li><a href="">- Rooms</a></li>
                             <li><a href="">- Amenities</a></li>
                             <li><a href="">- Hill Tours</a></li>
@@ -845,7 +845,7 @@
                 </h4>
             </div>
             <div class="pull-right">
-                <h4>Created by: <a href="https://batheco.com" target="_blank">Batheco</a></h4>
+                <h4>Developed by: <a href="https://batheco.com" target="_blank">Batheco</a></h4>
             </div>
         </div>
     </div>
