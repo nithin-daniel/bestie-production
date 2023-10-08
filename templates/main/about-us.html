@@ -354,28 +354,7 @@
         </section>
         <!--================End Choose Resot Area =================-->
         
-        <!--================Client Testimonial Area =================-->
-        <section class="client_area">  
-            <div class="container">
-                <div class="clients_slider owl-carousel">
-                    {% for testimonials in testimonials  %}     
-                    <div class="item">
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="{{ testimonials.image.url }}" alt="">
-                            </div>
-                            <div class="media-body">
-                                <p><i>“</i>{{ testimonials.content }}</p>
-                                <a href=""><h4>- {{ testimonials.name | upper }}</h4></a>
-                                <h5>{{ testimonials.position }}</h5>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </section>
-        <!--================End Client Testimonial Area =================-->
+ 
         
         <!--================Video Area =================-->
         <section class="video_area">
