@@ -33,9 +33,9 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{% url "useradmin:dashboard" %}">Home</a>
             </li>
-            <li class="nav-item">
+            {% comment %} <li class="nav-item">
               <a class="nav-link" href="{% url "useradmin:add_resort" %}">Add Resort</a>
-            </li>
+            </li> {% endcomment %}
           </ul>
         </div>
       </div>
@@ -61,7 +61,7 @@
                 <th scope="row">1</th>
                 <td>{{ resort.resort_name }}</td>
                 <td>{{ resort.resort_package }}</td>
-                <td>        <a href="{% url "useradmin:resort_delete" id=resort.id%}"><button type="button" class="btn btn-primary">Delete</button></a></td>
+                <td><a href="{% url "useradmin:resort_delete" id=resort.resort_id%}"><button type="button" class="btn btn-primary">Edit</button></a></td>
               </tr>
               {% endfor %}
             </tbody>

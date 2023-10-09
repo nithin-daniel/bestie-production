@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Resort</title>
-    <link rel="icon" href="{% static 'img/fav-icon.png' %}" type="image/x-icon" />
+    <link rel="icon" href="{% static 'img/fav-icon.png' %}" type="image/x-icon" />\
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -23,127 +24,135 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url "useradmin:dashboard" %}">Home</a>
                   </li>
-                  <li class="nav-item">
+                  {% comment %} <li class="nav-item">
                     <a class="nav-link" href="{% url "useradmin:add_resort" %}">Add Resort</a>
-                  </li>
+                  </li> {% endcomment %}
                 </ul>
               </div>
             </div>
           </nav>
     </div>
 <div class="container">
-    <h1>Add your Resort</h1>
+    <h1>Edit your Resort</h1>
     {% include 'includes/messages.html' %}
 
-    <form action="{% url "useradmin:add_resort" %}"  method="post" enctype="multipart/form-data">
+    <form action="{% url "useradmin:resort_delete" id=edit_resort.resort_id %}"  method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group">
           <label for="exampleInputEmail1">Resort Name</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Resort Name" name="resort_name" required>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  name="resort_name" value="{{edit_resort.resort_name}}" required>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Resort Desciption</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Resort Desciption"name="resort_description" required>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{edit_resort.resort_description }}"name="resort_description">
           </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Resort Service 1</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service" name="resort_service1" required>
+          <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_service_1 }}" name="resort_service1" required>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Resort Service 2</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service" name="resort_service2" required>
+            <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_service_2 }}" name="resort_service2" required>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Resort Service 3</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service (Optional)" name="resort_service3" >
+            <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_service_3 }}" name="resort_service3" >
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Resort Service 4</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service (Optional)" name="resort_service4" >
+            <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_service_4 }}" name="resort_service4" >
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Resort Service 5</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service (Optional)" name="resort_service5" >
+            <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_service_5 }}" name="resort_service5" >
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Resort Service 6</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service (Optional)" name="resort_service6" >
+            <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_service_6 }}" name="resort_service6" >
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Resort Service 7</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service (Optional)" name="resort_service7" >
+            <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_service_7 }}" name="resort_service7" >
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Resort Service 8</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Service (Optional)" name="resort_service8" >
+            <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_service_8 }}" name="resort_service8" >
           </div>
              <div class="form-group">
                 <label for="exampleInputPassword1">Resort Aminities 1</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities" name="resort_aminities1" required>
+                <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_aminities_1 }}" name="resort_aminities1" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Resort Aminities 2</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities" name="resort_aminities2" required>
+                <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_aminities_2 }}" name="resort_aminities2" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Resort Aminities 3</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities (Optional)" name="resort_aminities3" >
+                <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_aminities_3 }}" name="resort_aminities3" >
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Resort Aminities 4</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities (Optional)" name="resort_aminities4" >
+                <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_aminities_4 }}" name="resort_aminities4" >
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Resort Aminities 5</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities (Optional)" name="resort_aminities5" >
+                <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_aminities_5 }}" name="resort_aminities5" >
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Resort Aminities 6</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities (Optional)" name="resort_aminities6" >
+                <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_aminities_6 }}" name="resort_aminities6" >
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Resort Aminities 7</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities (Optional)" name="resort_aminities7" >
+                <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_aminities_7 }}" name="resort_aminities7" >
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Resort Aminities 8</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Aminities (Optional)" name="resort_aminities8" >
+                <input type="text" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_aminities_8 }}" name="resort_aminities8" >
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Resort Amount</label>
-                <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter Resort Amount" name="resort_amount" required >
+                <input type="number" class="form-control" id="exampleInputPassword1" value="{{ edit_resort.resort_amount }}" name="resort_amount" readonly >
             </div>
-            <div class="form-group">
+            {% comment %} <div class="form-group">
                 <div class="mb-3">
                     <label for="formFileSm" class="form-label">Resort Image 1</label>
-                    <input class="form-control form-control-sm" id="formFileSm" type="file" name="resort_image_1" required>
+                    <input class="form-control form-control-sm" id="formFileSm" type="file" name="resort_image_1" value="{{ edit_resort.resort_image_1.url }}" required>
                   </div>
+                  {% if edit_resort.resort_image_2 %}
                   <div class="mb-3">
                     <label for="formFileSm" class="form-label">Resort Image 2</label>
-                    <input class="form-control form-control-sm" id="formFileSm" type="file" name="resort_image_2" required>
+                    <input class="form-control form-control-sm" id="formFileSm" type="file" name="resort_image_2" value="{{ edit_resort.resort_image_2.url }}" >
                   </div>
+                  {% endif %}
+                  {% if edit_resort.resort_image_3 %}
                   <div class="mb-3">
                     <label for="formFileSm" class="form-label">Resort Image 3 </label>
-                    <input class="form-control form-control-sm" id="formFileSm" type="file" name="resort_image_3" required>
+                    <input class="form-control form-control-sm" id="formFileSm" type="file" name="resort_image_3" value="{{ edit_resort.resort_image_3.url }}" >
                   </div>
+                  {% endif %}
+                  {% if edit_resort.resort_image_4 %}
                   <div class="mb-3">
                     <label for="formFileSm" class="form-label">Resort Image 4</label>
-                    <input class="form-control form-control-sm" id="formFileSm" type="file" name="resort_image_4" required>
+                    <input class="form-control form-control-sm" id="formFileSm" type="file" name="resort_image_4" value="{{ edit_resort.resort_image_4.url }}" >
                   </div>
+                  {% endif %}
+                  {% if edit_resort.resort_image_5 %}
                   <div class="mb-3">
                     <label for="formFileSm" class="form-label">Resort Image 5</label>
-                    <input class="form-control form-control-sm" id="formFileSm" type="file" name="resort_image_5" required>
+                    <input class="form-control form-control-sm" id="formFileSm" type="file" name="resort_image_5" value="{{ edit_resort.resort_image_5.url }}" >
                   </div>
-              </div>
-              <div class="form-group">
+                  {% endif %}
+                </div> {% endcomment %}
+              <!-- <div class="form-group">
                 <label for="exampleInputPassword1">Resort Package</label>
                 <select class="form-select" name="resort_package" aria-label="Default select example" required>
-                    <option selected name="resort_package" value="">Select the Package</option>
+                    <option selected name="resort_package" value="{{ edit_resort.resort_package }}">Select the Package</option>
                     {% for package in package %}
                     <option value="{{ package.package_name }}">{{ package.package_name }}</option>
                     {% endfor %}
                   </select>         
-                 </div>
+                 </div> -->
         <button type="submit" class="btn btn-primary">Add Resort</button>
       </form>
 </div>

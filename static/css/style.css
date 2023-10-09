@@ -562,16 +562,16 @@ i:before {
 }
 
 .header_menu .navbar.navbar-default .navbar-header .navbar-brand {
-  height: 85px;
+  /* height: 85px; */
   line-height: 75px;
-  padding: 0px 0px 0px 15px;
-  width: 22%;
+  padding: 0px 0px 0px 0px;
+  width: 12%;
 }
 
 .header_menu .navbar.navbar-default .navbar-header .navbar-brand img {
   display: inline-block;
   /* width: 160px; */
-  width: 51%;
+  width: 100%;
 }
 
 .header_menu .navbar.navbar-default .navbar-header .navbar-brand img + img {

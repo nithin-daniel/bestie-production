@@ -2,6 +2,7 @@ from django.db import models
 from PIL import Image
 from django.conf import settings
 from django.utils.text import slugify
+import uuid
 # Create your models here.
 class Activity(models.Model):
     title = models.CharField(max_length=100)
@@ -83,6 +84,7 @@ class Packages(models.Model):
     
 
 class Resort(models.Model):
+    resort_id = models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
     resort_name = models.CharField(max_length=100)
     resort_description = models.TextField()
     resort_service_1 = models.CharField(max_length=100)
@@ -102,7 +104,7 @@ class Resort(models.Model):
     resort_aminities_7 = models.CharField(max_length=100,blank=True)
     resort_aminities_8 = models.CharField(max_length=100,blank=True)
     resort_amount  = models.CharField(max_length=100)
-    resort_image_1 = models.ImageField(upload_to='Resort_Image') 
+    resort_image_1 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
     resort_image_2 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
     resort_image_3 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
     resort_image_4 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
