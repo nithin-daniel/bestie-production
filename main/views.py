@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
-from main.models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort,Event,LatestEvents,ContactUs
+from main.models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort,Event,LatestEvents,ContactUs,Offer
 from django.http import HttpResponse
+import datetime 
 # Create your views here.
 def home(request):
     testimonials = ClientTestimonials.objects.all()
@@ -8,6 +9,13 @@ def home(request):
     events = Event.objects.all()[:2]
     latest_news = LatestEvents.objects.all()[:2]
     images = GalleryPhotos.objects.all()
+    offer = Offer.objects.all()
+    for date in Offer.objects.all():
+        if date.offer_date_end == datetime.date.today():
+            get_data = Offer.objects.filter(offer_date_end=datetime.date.today())
+            for delete_offer in get_data:
+                if delete_offer.offer_end_time < datetime.datetime.now().time():
+                    delete_offer.delete()
 
     context = {
         'testimonials':testimonials,
@@ -15,6 +23,7 @@ def home(request):
         'events':events,
         'latest_news':latest_news,
         "images":images,
+        "offer":offer,
     }
     return render(request,'main/home.html',context)
 

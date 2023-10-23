@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% comment %} <div class="scroll-section" style="width: 100%; height: 10rem; background-color: #ffb606; color: #fff;">
+    {% for offer in offer %}
+    <marquee behavior="" direction="" style="color: #fff;">demo</marquee>
+    {% endfor %}
+</div> {% endcomment %}
 <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
+
 <div class="help-button-wrapper">
     <ul class="help-list">
         <a href="" id="start-tour"></a>
@@ -156,6 +162,11 @@
 <!--================Header Area =================-->
 <header class="main_header_area">
     <div class="header_top">
+        {% if offer %}
+        <div class="scroll-section" style="width: 100%; height: 40px; background-color: #ffb606; color: #fff;">
+            <marquee style="color: #000; padding-top: 10px;">{% for offer in offer %}{{offer.offer_name}} Special Offer upto {{offer.offer_percentage}} <i class="fa fa-percent"  style="height: 1px;" aria-hidden="true"></i>  Starts from  {{offer.offer_date_start}} Ends at {{offer.offer_date_end}} - {% endfor %}</marquee>
+        </div>
+        {% endif %}
         <div class="container">
         </div>
     </div>
@@ -619,6 +630,7 @@
     <div class="resort_gallery owl-carousel">
         {% for images in images %}
         <div class="item">
+            {% if images.gallery_image %}
             <img src="{{ images.gallery_image.url }}" alt="">
             <div class="resort_g_hover">
                 <div class="resort_hover_inner">
@@ -627,6 +639,13 @@
                     <h5>Our Room</h5>
                 </div>
             </div>
+            {% else %}
+                <div class="resort_hover_inner">
+                    <video name='demo' controls autoplay width='100%' height='260rem' controls muted>
+                        <source src="{{ images.gallery_video.url }}" type="video/mp4"></source>
+                        </video> 
+                </div>
+            {% endif %}
         </div>
         {% endfor %}
     </div>

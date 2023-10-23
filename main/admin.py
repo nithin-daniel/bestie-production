@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort,Event,LatestEvents,ContactUs
+from .models import Activity,ClientTestimonials,GalleryPhotos,Packages,Resort,Event,LatestEvents,ContactUs,Offer
 # Register your models here.
 admin.site.register(Activity)
 admin.site.register(ClientTestimonials)
@@ -13,3 +13,4 @@ admin.site.register(Resort,ResortAdmin)
 admin.site.register(Event)
 # admin.site.register(LatestEvents)
 admin.site.register(ContactUs)
+admin.site.register(Offer)

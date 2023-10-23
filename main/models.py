@@ -2,6 +2,7 @@ from django.db import models
 from PIL import Image
 from django.conf import settings
 from django.utils.text import slugify
+from django.core.validators import FileExtensionValidator
 import uuid
 # Create your models here.
 class Activity(models.Model):
@@ -33,9 +34,10 @@ class ClientTestimonials(models.Model):
     
     
 class GalleryPhotos(models.Model):
-    gallery_image = models.ImageField(upload_to='gallery_photos',help_text="Upload only 740x493 pixels image")
+    gallery_image = models.ImageField(upload_to='gallery_photos',help_text="Upload only 740x493 pixels image",blank=True)
+    gallery_video = models.FileField(upload_to='videos_uploaded',null=True,blank=True,validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
     class Meta:
-        verbose_name_plural = 'Gallery Photos'
+        verbose_name_plural = 'Gallery'
 
 class ContactUs(models.Model):
     name = models.CharField(max_length=100)
@@ -109,6 +111,11 @@ class Resort(models.Model):
     resort_image_3 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
     resort_image_4 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
     resort_image_5 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
+    resort_image_6 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
+    resort_image_7 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
+    resort_image_8 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
+    resort_image_9 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
+    resort_image_10 = models.ImageField(upload_to='Resort_Image',null=True,blank=True) 
     resort_package = models.ForeignKey(Packages,on_delete=models.CASCADE)
     resort_slug = models.SlugField()
     user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
@@ -151,5 +158,17 @@ class LatestEvents(models.Model):
     def __str__(self):
         return self.news_title
     
+
+class Offer(models.Model):
+    offer_name = models.CharField(max_length=100)
+    offer_desciption = models.CharField(max_length=100,null=True,blank=True)
+    offer_date_start = models.DateField()
+    offer_start_time = models.TimeField()
+    offer_date_end = models.DateField()
+    offer_end_time = models.TimeField()
+    offer_percentage = models.CharField(max_length=10)
+    
+    def __str__(self):
+        return self.offer_name
     
     
