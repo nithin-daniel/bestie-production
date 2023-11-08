@@ -570,8 +570,7 @@ i:before {
 
 .header_menu .navbar.navbar-default .navbar-header .navbar-brand img {
   display: inline-block;
-  width: 105px;
-  /* width: 60%; */
+  width: 250px;
 }
 
 .header_menu .navbar.navbar-default .navbar-header .navbar-brand img + img {
